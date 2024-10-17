@@ -6,6 +6,8 @@ pageKey: setting-up-ec2-tutorial
 
 # Setting Up an AWS EC2 LAMP Server
 
+Your course will use Amazon Web Services (AWS) to host a virtual web server as part of your coursework, using the Elastic Cloud Compute (EC2) service. This tutorial will walk you through creating and configuring a basic web server, also referred to an "instance," using **L**inux, **A**pache, **M**ariaDB, and **P**HP (commonly referring to as the LAMP stack). 
+
 ## Get a (free or cheap\!) DNS Name For Your Web Apps
 
 If you plan to be a web developer, now may be a good time to buy a *yourname.com* domain or a cheap name from Namecheap or similar. If you already have one, feel free to use it, or a subdomain (*webapps.yourname.com*) if it's already in use.
@@ -21,9 +23,25 @@ If you plan to be a web developer, now may be a good time to buy a *yourname.com
 
 The content which follows contains commands which you will enter to install various programs on your PC or on your EC2 instance. **Unless otherwise stated, each command will be entered on a single line.**
 
-## Launch and Configure an EC2 Instance
+## Create and Configure an EC2 Instance
+
+To begin, you'll need to sign into the AWS Management Console. You can do this through your AWS Academy dashboard. If you're following this tutorial outside of AWS Academy, you can access the console here: [https://console.aws.amazon.com/](https://console.aws.amazon.com/)
 
 ### Launch an EC2 Instance
+
+If you've just signed in, you're probably looking at the _EC2 Dashboard_. If so, look for and click on the _Launch instance_ button:
+
+![Launch instance - dashboard](./assets/images/ec2-dashboard-launch-instance.png)
+
+If you've loaded the _Instances_ overview, look for and click on the _Launch instance_ button in the upper right corner:
+
+![Launch instance - instances list](./assets/images/ec2-instances-launch-instance.png)
+
+Both buttons will redirect your browser to the _Launch an instance_ form.
+
+In the _Names and tags_ section, enter a name for this instance in the **Name** field. This field is optional, but it will help identify _this_ instance if you decide to create more than one instance.
+
+![Instance name](./assets/images/instance-name.png)
 
 Under *Application and OS Images*, be sure to choose **Amazon Linux 2 AMI (HVM)**. Selecting a different AMI increases the difficulty of configuring the instance, as some of the options will not match the instructions given in the lecture.
 
@@ -93,7 +111,7 @@ Clicking that link will take you to the overview of your new instance:
 ### Allocate an Elastic IP address and associate it with your EC2 instance
 
 Our next step is to assign a permanent IP address to your EC2 instance - this is required to install a SSL/TLS certificate, which we'll need in order to 
-enable HTTPS (an encrypted version of a standard page request). While not strictly required, HTTPS is considered best practice, especially when installing tools 
+enable HTTPS (an encrypted version of a standard web request). While not strictly required, HTTPS is considered best practice, especially when installing tools 
 such as phpMyAdmin for managing our databases (you'll do this step later in the tutorial).
 
 #### Allocate an Elastic IP address
@@ -111,7 +129,7 @@ such as phpMyAdmin for managing our databases (you'll do this step later in the 
 
 #### Point Your Domain at Your EC2 Instance
 
-In your domain manager, create an A record using your public (Elastic IP) address. It's recommended to also create a CNAME record \- this allows you to point both [http://yourdomain](http://yourdomain) and [http://www.yourdomain](http://www.yourdomain) at your EC2 instance. For this document, we added the following records:
+In your domain manager, create an A record using your public (Elastic IP) address. It's recommended to also create a CNAME record \- this allows you to point both _http://yourdomain_ and _http://www.yourdomain_ at your EC2 instance. For this document, we added the following records:
 
 * **A Record**  
   * **Host:** @  
@@ -125,13 +143,13 @@ Your settings will vary based on the domain registrar where you acquired the dom
 
 ## Connecting to Your New Server
 
-You can connect to your server in many ways, but let's look at two of them, WinSCP and the terminal. As the name suggests, WinSCP is only on Windows, but there are comparable programs available for Mac. How you connect is up to you, based on your personal preferences.
+You can connect to your server in many ways, but let's look at two of them, WinSCP and the terminal. As the name suggests, WinSCP is only for the Windows operating system, but there are comparable programs available for macOS. How you connect is up to you, based on your personal preferences.
 
 ### Using WinSCP
 
-WinSCP is an integrated FTP and SSH client. If you are on a college laptop or on-campus computer, WinSCP is already installed. If you need to download it, you can do so from their website [https://winscp.net/eng/downloads.php](https://winscp.net/eng/downloads.php) and install it as you normally would.
+WinSCP is an integrated FTP and SSH client. If you are on a college laptop or on-campus computer, WinSCP is already installed. If you need to download it, you can do so from their website by visiting [https://winscp.net/eng/downloads.php](https://winscp.net/eng/downloads.php). Once WinSCP is installed, follow the steps below.
 
-When you open WinSCP, you will see a Login window. In the **Host** name field, enter your domain name. In the **Username** field, enter `ec2-user` and leave the password field blank. Then, click the **Advanced** drop-down menu.   
+Begin by opening WinSCP - you will presented with a Login window. In the **Host** name field, enter your domain name. In the **Username** field, enter `ec2-user` and leave the password field blank. Then, click the **Advanced** drop-down menu.   
 
 ![](./assets/images/setup.png)
 

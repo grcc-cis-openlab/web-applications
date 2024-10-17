@@ -25,7 +25,7 @@
     
 </head>
 <body>
-    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 navbar-expand-sm">
+    <nav class="navbar navbar-dark fixed-top bg-brand-dark flex-md-nowrap p-0 navbar-expand-sm">
     <a class="navbar-brand ps-3" href="./index.html">GRCC Technology Learning Center</a>
     <div class="collapse navbar-collapse" id="main-navbar">
         <ul class="navbar-nav">
@@ -63,8 +63,10 @@
 </nav>
 
         <div class="main-content">
-            <main role="main" class=" px-4">   
+            <main role="main" class="px-4">   
                 <h1 id="setting-up-an-aws-ec2-lamp-server">Setting Up an AWS EC2 LAMP Server</h1>
+
+<p>Your course will use Amazon Web Services (AWS) to host a virtual web server as part of your coursework, using the Elastic Cloud Compute (EC2) service. This tutorial will walk you through creating and configuring a basic web server, also referred to an “instance,” using <strong>L</strong>inux, <strong>A</strong>pache, <strong>M</strong>ariaDB, and <strong>P</strong>HP (commonly referring to as the LAMP stack).</p>
 
 <h2 id="get-a-free-or-cheap-dns-name-for-your-web-apps">Get a (free or cheap!) DNS Name For Your Web Apps</h2>
 
@@ -83,9 +85,25 @@
 
 <p>The content which follows contains commands which you will enter to install various programs on your PC or on your EC2 instance. <strong>Unless otherwise stated, each command will be entered on a single line.</strong></p>
 
-<h2 id="launch-and-configure-an-ec2-instance">Launch and Configure an EC2 Instance</h2>
+<h2 id="create-and-configure-an-ec2-instance">Create and Configure an EC2 Instance</h2>
+
+<p>To begin, you’ll need to sign into the AWS Management Console. You can do this through your AWS Academy dashboard. If you’re following this tutorial outside of AWS Academy, you can access the console here: <a href="https://console.aws.amazon.com/">https://console.aws.amazon.com/</a></p>
 
 <h3 id="launch-an-ec2-instance">Launch an EC2 Instance</h3>
+
+<p>If you’ve just signed in, you’re probably looking at the <em>EC2 Dashboard</em>. If so, look for and click on the <em>Launch instance</em> button:</p>
+
+<p><img src="./assets/images/ec2-dashboard-launch-instance.png" alt="Launch instance - dashboard" /></p>
+
+<p>If you’ve loaded the <em>Instances</em> overview, look for and click on the <em>Launch instance</em> button in the upper right corner:</p>
+
+<p><img src="./assets/images/ec2-instances-launch-instance.png" alt="Launch instance - instances list" /></p>
+
+<p>Both buttons will redirect your browser to the <em>Launch an instance</em> form.</p>
+
+<p>In the <em>Names and tags</em> section, enter a name for this instance in the <strong>Name</strong> field. This field is optional, but it will help identify <em>this</em> instance if you decide to create more than one instance.</p>
+
+<p><img src="./assets/images/instance-name.png" alt="Instance name" /></p>
 
 <p>Under <em>Application and OS Images</em>, be sure to choose <strong>Amazon Linux 2 AMI (HVM)</strong>. Selecting a different AMI increases the difficulty of configuring the instance, as some of the options will not match the instructions given in the lecture.</p>
 
@@ -159,7 +177,7 @@
 <h3 id="allocate-an-elastic-ip-address-and-associate-it-with-your-ec2-instance">Allocate an Elastic IP address and associate it with your EC2 instance</h3>
 
 <p>Our next step is to assign a permanent IP address to your EC2 instance - this is required to install a SSL/TLS certificate, which we’ll need in order to 
-enable HTTPS (an encrypted version of a standard page request). While not strictly required, HTTPS is considered best practice, especially when installing tools 
+enable HTTPS (an encrypted version of a standard web request). While not strictly required, HTTPS is considered best practice, especially when installing tools 
 such as phpMyAdmin for managing our databases (you’ll do this step later in the tutorial).</p>
 
 <h4 id="allocate-an-elastic-ip-address">Allocate an Elastic IP address</h4>
@@ -179,7 +197,7 @@ such as phpMyAdmin for managing our databases (you’ll do this step later in th
 
 <h4 id="point-your-domain-at-your-ec2-instance">Point Your Domain at Your EC2 Instance</h4>
 
-<p>In your domain manager, create an A record using your public (Elastic IP) address. It’s recommended to also create a CNAME record - this allows you to point both <a href="http://yourdomain">http://yourdomain</a> and <a href="http://www.yourdomain">http://www.yourdomain</a> at your EC2 instance. For this document, we added the following records:</p>
+<p>In your domain manager, create an A record using your public (Elastic IP) address. It’s recommended to also create a CNAME record - this allows you to point both <em>http://yourdomain</em> and <em>http://www.yourdomain</em> at your EC2 instance. For this document, we added the following records:</p>
 
 <ul>
   <li><strong>A Record</strong>
@@ -200,13 +218,13 @@ such as phpMyAdmin for managing our databases (you’ll do this step later in th
 
 <h2 id="connecting-to-your-new-server">Connecting to Your New Server</h2>
 
-<p>You can connect to your server in many ways, but let’s look at two of them, WinSCP and the terminal. As the name suggests, WinSCP is only on Windows, but there are comparable programs available for Mac. How you connect is up to you, based on your personal preferences.</p>
+<p>You can connect to your server in many ways, but let’s look at two of them, WinSCP and the terminal. As the name suggests, WinSCP is only for the Windows operating system, but there are comparable programs available for macOS. How you connect is up to you, based on your personal preferences.</p>
 
 <h3 id="using-winscp">Using WinSCP</h3>
 
-<p>WinSCP is an integrated FTP and SSH client. If you are on a college laptop or on-campus computer, WinSCP is already installed. If you need to download it, you can do so from their website <a href="https://winscp.net/eng/downloads.php">https://winscp.net/eng/downloads.php</a> and install it as you normally would.</p>
+<p>WinSCP is an integrated FTP and SSH client. If you are on a college laptop or on-campus computer, WinSCP is already installed. If you need to download it, you can do so from their website by visiting <a href="https://winscp.net/eng/downloads.php">https://winscp.net/eng/downloads.php</a>. Once WinSCP is installed, follow the steps below.</p>
 
-<p>When you open WinSCP, you will see a Login window. In the <strong>Host</strong> name field, enter your domain name. In the <strong>Username</strong> field, enter <code>ec2-user</code> and leave the password field blank. Then, click the <strong>Advanced</strong> drop-down menu.</p>
+<p>Begin by opening WinSCP - you will presented with a Login window. In the <strong>Host</strong> name field, enter your domain name. In the <strong>Username</strong> field, enter <code>ec2-user</code> and leave the password field blank. Then, click the <strong>Advanced</strong> drop-down menu.</p>
 
 <p><img src="./assets/images/setup.png" alt="" /></p>
 
