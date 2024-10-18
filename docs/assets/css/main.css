@@ -1,4 +1,6 @@
-body { font-size: 0.875rem; }
+body { font-size: 1rem; }
+
+.bg-brand-dark { background-color: #032c4d; }
 
 /* Sidebar */
 .sidebar { position: fixed; top: 0; bottom: 0; left: 0; z-index: 100; /* Behind the navbar */ padding: 48px 0 0; /* Height of navbar */ box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1); }
@@ -26,10 +28,28 @@ body { font-size: 0.875rem; }
 /* Content */
 .main-content { padding-top: 65px; /* Space for fixed navbar */ max-width: 1100px; }
 
+.main-content h1 { color: #032c4d; }
+
+.main-content h2 { font-size: 1.75rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+
+.main-content h3 { font-size: 1.5rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+
+.main-content h4 { font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+
+.main-content img { display: block; margin: 0.25rem auto; max-width: 800px; }
+
+.main-content i, .main-content em { color: #032c4d; font-weight: 600; }
+
 @media (min-width: 768px) { .main-content { margin-left: 300px; } }
 
 /* Navbar */
-.navbar-brand { padding-top: .75rem; padding-bottom: .75rem; font-size: 1rem; background-color: rgba(0, 0, 0, 0.25); }
+.navbar.navbar-dark { background-color: #032c4d; color: #fff; }
+
+.navbar.navbar-dark a, .navbar.navbar-dark .nav-link { color: #ffcc00; }
+
+.navbar.navbar-dark a:hover, .navbar.navbar-dark a:active, .navbar.navbar-dark .nav-link:hover, .navbar.navbar-dark .nav-link:active { color: #e6b800; }
+
+.navbar-brand { padding-top: .75rem; padding-bottom: .75rem; font-size: 1rem; background-color: rgba(0, 0, 0, 0.25); color: #ffcc00; }
 
 .navbar .form-control { padding: .75rem 1rem; border-width: 0; border-radius: 0; }
 
