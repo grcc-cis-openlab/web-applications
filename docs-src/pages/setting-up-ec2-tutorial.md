@@ -2,15 +2,16 @@
 layout: default
 title: Setting Up an AWS EC2 LAMP Server
 pageKey: setting-up-ec2-tutorial
+permalink: /setting-up-ec2-tutorial
 ---
 
 # Setting Up an AWS EC2 LAMP Server
 
-Your course will use Amazon Web Services (AWS) to host a virtual web server as part of your coursework, using the Elastic Cloud Compute (EC2) service. This tutorial will walk you through creating and configuring a basic web server, also referred to an "instance," using **L**inux, **A**pache, **M**ariaDB, and **P**HP (commonly referring to as the LAMP stack). 
+Your course will use Amazon Web Services (AWS) to host a virtual web server as part of your coursework, using the Elastic Cloud Compute (EC2) service. This tutorial will walk you through creating and configuring a basic web server, also referred to as an "instance," using **L**inux, **A**pache, **M**ariaDB, and **P**HP (commonly referring to as the LAMP stack). 
 
 ## Get a (free or cheap\!) DNS Name For Your Web Apps
 
-If you plan to be a web developer, now may be a good time to buy a *yourname.com* domain or a cheap name from Namecheap or similar. If you already have one, feel free to use it, or a subdomain (*webapps.yourname.com*) if it's already in use.
+If you plan to be a web developer, now may be a good time to buy a *yourname.com* domain or a cheap name from Namecheap or similar. If you already have a domain, feel free to use it, or a subdomain (*webapps.yourname.com*) if you don't want to replace your existing website.
 
  A free (or low cost) domain can be found here (when they feel like giving you one\!):
 
@@ -31,21 +32,21 @@ To begin, you'll need to sign into the AWS Management Console. You can do this t
 
 If you've just signed in, you're probably looking at the _EC2 Dashboard_. If so, look for and click on the _Launch instance_ button:
 
-![Launch instance - dashboard](./assets/images/ec2-dashboard-launch-instance.png)
+![Launch instance - dashboard](/assets/images/ec2-dashboard-launch-instance.png)
 
 If you've loaded the _Instances_ overview, look for and click on the _Launch instance_ button in the upper right corner:
 
-![Launch instance - instances list](./assets/images/ec2-instances-launch-instance.png)
+![Launch instance - instances list](/assets/images/ec2-instances-launch-instance.png)
 
 Both buttons will redirect your browser to the _Launch an instance_ form.
 
 In the _Names and tags_ section, enter a name for this instance in the **Name** field. This field is optional, but it will help identify _this_ instance if you decide to create more than one instance.
 
-![Instance name](./assets/images/instance-name.png)
+![Instance name](/assets/images/instance-name.png)
 
 Under *Application and OS Images*, be sure to choose **Amazon Linux 2 AMI (HVM)**. Selecting a different AMI increases the difficulty of configuring the instance, as some of the options will not match the instructions given in the lecture.
 
-![AMI selection](./assets/images/os-selection.png)
+![AMI selection](/assets/images/os-selection.png)
 
 If you're creating this instance as part of your AWS Academy training, you should have an existing SSH key, called *vockey.ppk*, which you can download from your AWS Academy portal. If not, you can create a new SSH key now, following the instructions below.
 
@@ -53,11 +54,11 @@ If you're creating this instance as part of your AWS Academy training, you shoul
 
 Under the *Key Pair (login)* section, click the *Create new key pair* button:
 
-![Key pair options](./assets/images/key-pair.png)
+![Key pair options](/assets/images/key-pair.png)
 
 In the dialog which opens, give your key a name:
 
-![Key pair dialog](./assets/images/key-pair-dialog.png)
+![Key pair dialog](/assets/images/key-pair-dialog.png)
 
 For this document, we named the file *grcc-rsa-keyfile.pem*. Click *Create key pair* and select an easy-to-find location for your file when prompted. We recommend saving it to the root of the folder where your course files are located.
 
@@ -94,17 +95,17 @@ chmod 400 key-pair-name.pem
 
 **Almost done\!** Under *Network Settings*, ensure that all three Firewall options are checked:
 
-![Network settings](./assets/images/network-settings.png)
+![Network settings](/assets/images/network-settings.png)
 
 This will allow the wizard to create the correct inbound rules to allow your EC2 instance to receive HTTP and HTTPS requests.
 
 Click the *Launch instance* button to initiate the creation of your EC2 instance\! Once the process completes, find and click on the instance identifier (*i-xxxxxxxxxxxxx*) in the success message:
 
-![Success dialog](./assets/images/success-with-instance-link.png)
+![Success dialog](/assets/images/success-with-instance-link.png)
 
 Clicking that link will take you to the overview of your new instance:
 
-![Instance dashboard](./assets/images/instance-dashboard.png)
+![Instance dashboard](/assets/images/instance-dashboard.png)
 
 **Next up:** allocating a "permanent" IP address to your instance using Elastic IP.
 
@@ -117,7 +118,7 @@ such as phpMyAdmin for managing our databases (you'll do this step later in the 
 #### Allocate an Elastic IP address
 
 1. On the left side of your browser window, look for the section labeled *Network & Security*, and then click on the *Elastic IPs* option:  
-   ![Network security menu](./assets/images/network-security-menu.png)  
+   ![Network security menu](/assets/images/network-security-menu.png)  
 1. In the upper right corner of the next page, click on *Allocate Elastic IP address*.   
 1. Leave all settings at their default and click the *Allocate* button. This will allocate an IP address to your account from the pool of available IP addresses.   
 1. Once the page has reloaded, check the box for your new IP address, then find and click the *Actions* button in the upper right corner of your browser.   
@@ -143,55 +144,55 @@ Your settings will vary based on the domain registrar where you acquired the dom
 
 ## Connecting to Your New Server
 
-You can connect to your server in many ways, but let's look at two of them, WinSCP and the terminal. As the name suggests, WinSCP is only for the Windows operating system, but there are comparable programs available for macOS. How you connect is up to you, based on your personal preferences.
+You can connect to your server in many ways, but let's look at two of them: WinSCP and the terminal. As the name suggests, WinSCP is only for the Windows operating system, but there are comparable programs available for macOS. How you connect is up to you, based on your personal preferences.
 
 ### Using WinSCP
 
-WinSCP is an integrated FTP and SSH client. If you are on a college laptop or on-campus computer, WinSCP is already installed. If you need to download it, you can do so from their website by visiting [https://winscp.net/eng/downloads.php](https://winscp.net/eng/downloads.php). Once WinSCP is installed, follow the steps below.
+WinSCP is an integrated FTP and SSH client. If you are on a college laptop or an on-campus computer, then WinSCP is already installed. If you need to download it, visit [https://winscp.net/eng/downloads.php](https://winscp.net/eng/downloads.php). Once WinSCP is installed, follow the steps below.
 
 Begin by opening WinSCP - you will presented with a Login window. In the **Host** name field, enter your domain name. In the **Username** field, enter `ec2-user` and leave the password field blank. Then, click the **Advanced** drop-down menu.   
 
-![](./assets/images/setup.png)
+![](/assets/images/setup.png)
 
 In the _Advanced Site Settings_ window, use the navigation panel on the left and click on **Authentication**, located under _SSH_, as shown below. We need to create a .ppk file from the .pem file you saved earlier. Open the **Tools** drop-down menu and choose **Generate New Key Pair with PuTTYgen**.   
 
-![](./assets/images/advanced-settings.png)
+![](/assets/images/advanced-settings.png)
 
 In the PuTTY Key Generator, click the **Load** button. Navigate to where your .pem file is located and open it.   
 
-![](./assets/images/putty-keygen1.png)
+![](/assets/images/putty-keygen1.png)
 
 The window will change to look like the image below. If you wish to secure your server further, enter a secure password in the **Key passphrase** field and again in the **Confirm passphrase** field. You will be prompted for this password each time you login. You may leave the field blank if you wish, but it will be less secure, and a warning will appear when you save the private key. To save the private key, click the **Save private key** button. Like your .pem file, save it somewhere secure where you can find it again. On a campus computer, you should save your key file to your `J:\\` drive in order to access it later.  
 
-![](./assets/images/putty-keygen2.png)
+![](/assets/images/putty-keygen2.png)
 
 Back in the _Advanced Site Settings_ window, the **Private key file** field should be populated with your .ppk file. If it isn't, use the three dots menu (&hellip;) to choose your .ppk file. It should look like the image below. Click **OK** to continue.  
 
-![](./assets/images/advanced-settings.png)
+![](/assets/images/advanced-settings.png)
 
 Double check your settings below and click **Save**.  
 
-![](./assets/images/setup.png) 
+![](/assets/images/setup.png) 
 
 In the _Save session as site_ dialog window, you can enter a descriptive name in the **Site name** field, or leave it as default. Then, click **OK** to finish saving your settings.  
 
-![](./assets/images/savesession.png)
+![](/assets/images/savesession.png)
 
 Now, whenever you open WinSCP, your Login window should look like this.  
 
-![](./assets/images/savesession-login.png) 
+![](/assets/images/savesession-login.png) 
 
 Choose **Login** to log onto your server. The first time you connect to your server, you may be prompted to confirm some settings. Also, if you entered a password for your key file, you will be prompted to enter that password before continuing. Once you clear any prompts, you are connected. 
 
-You will now see the main window as shown below. The left panel is your local computer, and the right panel is your server (your EC2 instance). Each of these panels will show a list of folders (also referred to as "directories") and files - these lists are collectively known as a _file tree_. The current location (the "active" or "current" directory) within each file system is shown in the blue bar above each file tree. If you previously completed _CIS-148 HTML Essentials_, this should look very similar to FileZilla. 
+You will now see the main window as shown below. The left panel is your local computer, and the right panel is your server (your EC2 instance). Each of these panels will show a list of folders (also referred to as "directories") and files - each of these lists is collectively known as a _file tree_. The current location (the "active" or "current" directory) within each file system is shown in the blue bar above each file tree. If you previously completed _CIS-148 HTML Essentials_, this should look very similar to FileZilla. 
 
 To connect to your server via SSH, you will need to click on the **Open session in PuTTY** button. 
 
-![](./assets/images/opensession.png)
+![](/assets/images/opensession.png)
 
-Again, the first time you do so, you may need to confirm some things in a series of dialog boxes. If you entered a password for your key file, you will need to enter to continue. If you see the terminal as shown below, you are connected and may skip to the *Set Up LAMP and phpMyAdmin* section.  
+Again, the first time you do so, you may need to confirm some things in a series of dialog boxes. If you entered a password for your key file, you will need to enter it in order to continue. If you see the terminal as shown below, you are connected and may skip to the *Set Up LAMP and phpMyAdmin* section.  
 
-![](./assets/images/putty-cli.png)
+![](/assets/images/putty-cli.png)
 
 ### Using Windows Terminal
 
@@ -311,7 +312,7 @@ sudo systemctl is-enabled httpd
 
 The last command should print "enabled" &mdash; your Apache module is now running\! Open your browser and type your domain into the navigation bar, then hit <kbd>Enter</kbd>. Your domain should load the Apache test page:
 
-![Apache test page](./assets/images/apache-test-page.png)
+![Apache test page](/assets/images/apache-test-page.png)
 
 **Congratulations\!** You now have a working web server\! We're not quite done yet &mdash; we need to update permissions on some files, and make sure that files which you will upload later have the correct permissions automatically.
 
@@ -555,7 +556,7 @@ https://your_domain/phpMyAdmin
 ```
 
 Replace *your\_domain* with your domain name. You should now see the phpMyAdmin login screen:  
-![phpMyAdmin login screen](./assets/images/phpMyAdmin.png)
+![phpMyAdmin login screen](/assets/images/phpMyAdmin.png)
 
 Login using "root" as the username and using the MariaDB password which you created above. You should now be logged in\! **Great job\!**
 
