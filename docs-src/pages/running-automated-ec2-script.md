@@ -56,7 +56,7 @@ If you prefer, you can create the script using the built-in text editor in Linux
     ```shell
     sudo nano install-lamp-secure.sh
     ```
-3. Open this on GitHub in a new tab: [install-lamp-secure.sh](./install-lamp-secure.sh) (right click to open in new tab).
+3. Open this on GitHub in a new tab: [install-lamp-secure.sh](/install-lamp-secure.sh?raw=1) (right click to open in new tab).
 4. Copy the script by clicking the copy button in the upper right corner next to the **Raw** button or select all of the text in the code box and press <kbd>Ctrl</kbd> \+ <kbd>C</kbd> to copy.
 5. Back in nano, paste the script into the text editor.
 6. Save the file by pressing <kbd>Ctrl</kbd> \+ <kbd>X</kbd>, type `y`, and then press <kbd>Enter</kbd> to confirm the save. Hit <kbd>Enter</kbd> again to accept the file name.

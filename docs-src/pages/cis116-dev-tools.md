@@ -19,13 +19,13 @@ try alternate methods of completing an assignment (or just wanted to try somethi
 You can install Python by visiting [https://www.python.org/downloads/](https://www.python.org/downloads/). The website _should_ 
 automatically detect your operating system and offer the correct version to install:
 
-![Download Python](/assets/images/download-python.png)
+![Download Python](assets/images/download-python.png)
 
 Once the download is complete, launch the installer:
 
-![Install Python](/assets/images/install-python.png)
+![Install Python](assets/images/install-python.png)
 
 The default install options are safe to use, so we'd recommend choosing that option. Once the installer completes, you will be able 
 to execute Python files locally. You'll also have access to the "native" Python code editor, *IDLE*:
 
-![IDLE - Python's native code editor](/assets/images/idle.png)
+![IDLE - Python's native code editor](assets/images/idle.png)
