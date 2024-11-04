@@ -34,6 +34,12 @@
             <li class="nav-item text-nowrap">
                 <a class="nav-link" href="./examples.html">Examples</a>
             </li>
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="https://github.com/grcc-cis-openlab/web-applications">
+                    <i class="fab fa-github"></i>
+                    Github
+                </a>
+            </li>
         </ul>
         <form class="d-flex me-2" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
@@ -147,7 +153,7 @@
 
 <h4 id="using-winscp">Using WinSCP</h4>
 
-<p>If you are using WinSCP, you can <a href="/install-lamp-secure.sh?raw=1">download <code>install-lamp-secure.sh</code> from this repository</a> and use the WinSCP GUI to upload the file to ec2-user’s personal home directory. This will make the script easy to locate when you need to run it in a few moments. Once you’ve uploaded the script file, click on the <code>Open session in PuTTY</code> button and move on to <a href="#running-the-script">Running the Script</a></p>
+<p>If you are using WinSCP, you can <a href="https://raw.githubusercontent.com/grcc-cis-openlab/web-applications/bca7f34cf38b8367765c7a768bb659703297434c/install-lamp-secure.sh">download <code>install-lamp-secure.sh</code> from this repository</a> and use the WinSCP GUI to upload the file to ec2-user’s personal home directory. This will make the script easy to locate when you need to run it in a few moments. Once you’ve uploaded the script file, click on the <code>Open session in PuTTY</code> button and move on to <a href="#running-the-script">Running the Script</a></p>
 
 <h4 id="using-the-terminal">Using the Terminal</h4>
 
@@ -155,7 +161,7 @@
 
 <p>Download <code>install-lamp-secure.sh</code> from this repository using the following command:</p>
 
-<pre><code class="language-shell">wget https://github.com/grcc-cis-openlab/web-applications/blob/cf941e491b5ee88712653836b29381dc43b1e90b/install-lamp-secure.sh
+<pre><code class="language-shell">wget https://raw.githubusercontent.com/grcc-cis-openlab/web-applications/bca7f34cf38b8367765c7a768bb659703297434c/install-lamp-secure.sh
 </code></pre>
 
 <h3 id="method-2-use-nano-to-create-the-script">METHOD 2: Use <code>nano</code> to Create the Script</h3>
@@ -171,7 +177,7 @@
     <pre><code class="language-shell"> sudo nano install-lamp-secure.sh
 </code></pre>
   </li>
-  <li>Open this on GitHub in a new tab: <a href="/install-lamp-secure.sh?raw=1">install-lamp-secure.sh</a> (right click to open in new tab).</li>
+  <li>Open this on GitHub in a new tab: <a href="https://raw.githubusercontent.com/grcc-cis-openlab/web-applications/bca7f34cf38b8367765c7a768bb659703297434c/install-lamp-secure.sh">install-lamp-secure.sh</a> (right click to open in new tab).</li>
   <li>Copy the script by clicking the copy button in the upper right corner next to the <strong>Raw</strong> button or select all of the text in the code box and press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy.</li>
   <li>Back in nano, paste the script into the text editor.</li>
   <li>Save the file by pressing <kbd>Ctrl</kbd> + <kbd>X</kbd>, type <code>y</code>, and then press <kbd>Enter</kbd> to confirm the save. Hit <kbd>Enter</kbd> again to accept the file name.</li>
