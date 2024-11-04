@@ -2,9 +2,10 @@
 layout: default
 title: Automated AWS EC2 Installation
 pageKey: running-automated-ec2-script
+permalink: /running-automated-ec2-script
 ---
 
-# GRCC Web Applications Classes
+# Automated AWS EC2 Installation
 
 For Grand Rapids Community College's Web Applications I &amp; II (CIS 241 &amp; CIS 247) classes. 
 
@@ -25,13 +26,13 @@ Before you begin, check to make sure your DNS records have been set up correctly
 
 ## Getting the Script Onto Your Server
 
-**FIRST:** Connect to your server console via SSH (Terminal, WinSCP, Putty, etc.) or the AWS Connect function.
+**FIRST:** Connect to your server console via SSH (Terminal, WinSCP, PuTTY, etc.) or the AWS Connect function.
 
 ### METHOD 1: Download the Script (Recommended)
 
 #### Using WinSCP
 
-If you are using WinSCP, you can [download `install-lamp-secure.sh` from this repository](install-lamp-secure.sh?raw=1) and use the WinSCP GUI to upload the file to ec2-user's personal home directory. This will make it easy to locate when you need to run it in a minute. Once you've uploaded the script file, click on the `Open session in PuTTY` button and move on to [Running the Script](#running-the-script)
+If you are using WinSCP, you can [download `install-lamp-secure.sh` from this repository](/install-lamp-secure.sh?raw=1) and use the WinSCP GUI to upload the file to ec2-user's personal home directory. This will make the script easy to locate when you need to run it in a few moments. Once you've uploaded the script file, click on the `Open session in PuTTY` button and move on to [Running the Script](#running-the-script)
 
 #### Using the Terminal
 
@@ -40,7 +41,7 @@ By default, when you SSH into your server as `ec2-user`, you will be at the `ec2
 Download `install-lamp-secure.sh` from this repository using the following command:
 
 ```shell
-wget https://github.com/christopherpowers1/grcc-webapplications/raw/main/install-lamp-secure.sh
+wget https://github.com/grcc-cis-openlab/web-applications/blob/cf941e491b5ee88712653836b29381dc43b1e90b/install-lamp-secure.sh
 ```
 
 ### METHOD 2: Use `nano` to Create the Script
@@ -48,18 +49,17 @@ wget https://github.com/christopherpowers1/grcc-webapplications/raw/main/install
 If you prefer, you can create the script using the built-in text editor in Linux called Nano. ([How to Use Nano (external)](https://linuxize.com/post/how-to-use-nano-text-editor/)) 
 
 1. On your Linux terminal screen, verify you are in the `ec2-user` home directory ('~') by entering: 
-```shell
-cd ~
-```
-
+    ```shell
+    cd ~
+    ```
 2. Create a new file using `nano` called `install-lamp-secure.sh`:
-```shell
-sudo nano install-lamp-secure.sh
-```
+    ```shell
+    sudo nano install-lamp-secure.sh
+    ```
 3. Open this on GitHub in a new tab: [install-lamp-secure.sh](./install-lamp-secure.sh) (right click to open in new tab).
 4. Copy the script by clicking the copy button in the upper right corner next to the **Raw** button or select all of the text in the code box and press <kbd>Ctrl</kbd> \+ <kbd>C</kbd> to copy.
 5. Back in nano, paste the script into the text editor.
-6. Save the file by pressing <kbd>Ctrl</kbd> \+ <kbd>X</kbd>, type `y`, and then <kbd>Enter</kbd> to confirm the save. Hit <kbd>Enter</kbd> to accept the file name.
+6. Save the file by pressing <kbd>Ctrl</kbd> \+ <kbd>X</kbd>, type `y`, and then press <kbd>Enter</kbd> to confirm the save. Hit <kbd>Enter</kbd> again to accept the file name.
 
 You're now ready to run the script.
 
@@ -69,7 +69,7 @@ You're now ready to run the script.
 
 Watch what the script is doing as it runs. The script will display pertinent information as it goes along. At several points, it will pause and either give you information or ask you for information. 
 
-It will ask you to check to see if your server is running. AT THAT POINT, IF YOUR SERVER IS NOT RUNNING, DO NOT CONTINUE UNTIL IT IS WORKING. The Domain Name Server (DNS) needs to be able to resolve before Certbot can register your domain for the SSL certificate. See the [Check Your DNS Records](#check-your-dns-records) section at the top of this readme file for details.
+The script will ask you to check to see if your server is running. AT THAT POINT, IF YOUR SERVER IS NOT RUNNING, DO NOT CONTINUE UNTIL IT IS WORKING. The Domain Name Server (DNS) needs to be able to resolve before Certbot can register your domain for the SSL certificate. See the [Check Your DNS Records](#check-your-dns-records) section at the top of this readme file for details.
 
 You will also be prompted for the domain name you will be using for the class. Be sure to include the TLD portion because what you enter will be used in Certbot to register the domain for SSL certification. For example: `your-domain.xyz` not `your-domain`
 

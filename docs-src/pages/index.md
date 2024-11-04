@@ -2,11 +2,12 @@
 layout: default
 title: 
 pageKey: index
+permalink: /
 ---
 
 # Welcome!
 
-The following content is maintained on behalf of the GRCC Technology Learning Center. This website is intended as a 
+The following content is maintained on behalf of the [GRCC Technology Learning Center](https://www.grcc.edu/students-resources/academic-support-tutoring-services/technology-learning-center). This website is intended as a 
 educational resource for students of the Computer Information Systems (CIS) and Mechanical, Drafting, &amp; Engineering departments. The 
 content herein is free for anyone to browse and use, but be aware that the content is targeted to our coursework 
 and may not reflect other college or university outcomes or best practices as followed by the general development community.
@@ -19,8 +20,8 @@ CIS-241 &amp; CIS-247 utilize Amazon Web Services (AWS) and it's Elastic Cloud C
 web server virtual machine (VM) to which students deploy their code. This process can be tricky, so we've developed the 
 following tutorials:
 
-- [Setting Up an AWS EC2 LAMP Server](./setting-up-ec2-tutorial): a step-by-step guide to set up an EC2 instance, including setting 
+- [Setting Up an AWS EC2 LAMP Server](/setting-up-ec2-tutorial): a step-by-step guide to set up an EC2 instance, including setting 
 up a custom domain.
 
-- [Automated AWS EC2 Installation](./running-automated-ec2-script): a Bash script which can be run on an EC2 instance to automate the 
+- [Automated AWS EC2 Installation](/running-automated-ec2-script): a Bash script which can be run on an EC2 instance to automate the 
 steps described in the _Setting Up an AWS EC2 LAMP Server_ tutorial. 

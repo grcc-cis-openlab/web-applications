@@ -7,10 +7,10 @@
     <meta name="description" content="" />
     <meta name="keywords" content="GRCC,TLC,ruby,python,CIS" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
-    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     
     <title>Setting Up an AWS EC2 LAMP Server &mdash; GRCC Technology Learning Center</title>
     
@@ -18,59 +18,111 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-    <link rel="stylesheet" href="./assets/css/fontawesome.css" />
-    <link rel="stylesheet" href="./assets/css/prism.css" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="/assets/css/prism.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
 
     
 </head>
 <body>
     <nav class="navbar navbar-dark fixed-top bg-brand-dark flex-md-nowrap p-0 navbar-expand-sm">
-    <a class="navbar-brand ps-3" href="./index.html">GRCC Technology Learning Center</a>
+    <a class="navbar-brand ps-3" href="/">GRCC Technology Learning Center</a>
     <div class="collapse navbar-collapse" id="main-navbar">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav me-auto">
             <li class="nav-item active text-nowrap">
-                <a class="nav-link" href="./index.html">Docs</a>
+                <a class="nav-link" href="/">Docs</a>
             </li>
             <li class="nav-item text-nowrap">
-                <a class="nav-link" href="./examples.html">Examples</a>
+                <a class="nav-link" href="/examples.html">Examples</a>
             </li>
         </ul>
+        <form class="d-flex me-2" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-light" type="submit">
+                <i class="fas fa-search"></i>
+                <span class="sr-only">Search</span>
+            </button>
+          </form>
     </div>
 </nav>
     
     <div class="container-fluid">   
         <nav class="d-none d-md-block bg-light sidebar">
     <div class="sidebar-sticky">
-        <h4 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1">
-            Tutorials
-        </h4>
-        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1">
-            CIS-241 / CIS-247
+        <h6 class="sidebar-heading">
+            <a href="/" class="nav-link">
+                <i class="fa fa-home"></i>
+                Home
+            </a>
         </h6>
-        <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="./setting-up-ec2-tutorial">Setting Up an AWS EC2 LAMP Server</a></li>
-            <li class="nav-item"><a class="nav-link" href="./running-automated-ec2-script">Automated AWS EC2 Installation</a></li>
+
+        <h6 class="sidebar-heading">
+            CIS-116 Introduction to Programming
+        </h6>
+        <ul class="sidebar-nav-list">
+            <li class="nav-item"><a class="nav-link" href="/cis116-dev-tools">Setting Up a Local Development Environment</a></li>
         </ul>
 
-        <h4 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1">
-            Examples
-        </h4>
-        <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="#">---</a></li>
+        <h6 class="sidebar-heading">
+            CIS-117 Java Programming I
+        </h6>
+        <ul class="sidebar-nav-list">
+            <li class="nav-item"><a class="nav-link" href="#">Setting Up a Local Development Environment</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">First Program: <i>Hello, World!</i></a></li>
+        </ul>
+
+        <h6 class="sidebar-heading">
+            CIS-125 VisualBasic.NET Programming I
+        </h6>
+        <ul class="sidebar-nav-list">
+            <li class="nav-item"><a class="nav-link" href="#">Setting Up a Local Development Environment</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">First Program: <i>Hello, World!</i></a></li>
+        </ul>
+
+        <h6 class="sidebar-heading">
+            CIS-127 C/C++ Programming I
+        </h6>
+        <ul class="sidebar-nav-list">
+            <li class="nav-item"><a class="nav-link" href="#">Setting Up a Local Development Environment</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">First Program: <i>Hello, World!</i></a></li>
+        </ul>
+
+        <h6 class="sidebar-heading">
+            CIS-129 C# Programming I
+        </h6>
+        <ul class="sidebar-nav-list">
+            <li class="nav-item"><a class="nav-link" href="#">Setting Up a Local Development Environment</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">First Program: <i>Hello, World!</i></a></li>
+        </ul>
+
+        <h6 class="sidebar-heading">
+            CIS-148 Html Essentials
+        </h6>
+        <ul class="sidebar-nav-list">
+            <li class="nav-item"><a class="nav-link" href="/html-essentials-dev-tools">Setting Up a Local Development Environment</a></li>
+            <li class="nav-item"><a class="nav-link" href="/connecting-to-raider">Connecting to the Raider Web Server</a></li>
+        </ul>
+
+        <div class="sidebar-heading">
+            <h6>CIS-241 Web Application Programming I</h6>
+            <h6>CIS-247 Web Application Programming II</h6>
+        </div>
+        <ul class="sidebar-nav-list">
+            <li class="nav-item"><a class="nav-link" href="/setting-up-ec2-tutorial">Setting Up an AWS EC2 LAMP Server</a></li>
+            <li class="nav-item"><a class="nav-link" href="/running-automated-ec2-script">Automated AWS EC2 Installation</a></li>
         </ul>
     </div>
 </nav>
 
         <div class="main-content">
-            <main role="main" class="px-4">   
+            <main id="main" role="main">   
                 <h1 id="setting-up-an-aws-ec2-lamp-server">Setting Up an AWS EC2 LAMP Server</h1>
 
-<p>Your course will use Amazon Web Services (AWS) to host a virtual web server as part of your coursework, using the Elastic Cloud Compute (EC2) service. This tutorial will walk you through creating and configuring a basic web server, also referred to an “instance,” using <strong>L</strong>inux, <strong>A</strong>pache, <strong>M</strong>ariaDB, and <strong>P</strong>HP (commonly referring to as the LAMP stack).</p>
+<p>Your course will use Amazon Web Services (AWS) to host a virtual web server as part of your coursework, using the Elastic Cloud Compute (EC2) service. This tutorial will walk you through creating and configuring a basic web server, also referred to as an “instance,” using <strong>L</strong>inux, <strong>A</strong>pache, <strong>M</strong>ariaDB, and <strong>P</strong>HP (commonly referring to as the LAMP stack).</p>
 
 <h2 id="get-a-free-or-cheap-dns-name-for-your-web-apps">Get a (free or cheap!) DNS Name For Your Web Apps</h2>
 
-<p>If you plan to be a web developer, now may be a good time to buy a <em>yourname.com</em> domain or a cheap name from Namecheap or similar. If you already have one, feel free to use it, or a subdomain (<em>webapps.yourname.com</em>) if it’s already in use.</p>
+<p>If you plan to be a web developer, now may be a good time to buy a <em>yourname.com</em> domain or a cheap name from Namecheap or similar. If you already have a domain, feel free to use it, or a subdomain (<em>webapps.yourname.com</em>) if you don’t want to replace your existing website.</p>
 
 <p>A free (or low cost) domain can be found here (when they feel like giving you one!):</p>
 
@@ -93,21 +145,21 @@
 
 <p>If you’ve just signed in, you’re probably looking at the <em>EC2 Dashboard</em>. If so, look for and click on the <em>Launch instance</em> button:</p>
 
-<p><img src="./assets/images/ec2-dashboard-launch-instance.png" alt="Launch instance - dashboard" /></p>
+<p><img src="/assets/images/ec2-dashboard-launch-instance.png" alt="Launch instance - dashboard" /></p>
 
 <p>If you’ve loaded the <em>Instances</em> overview, look for and click on the <em>Launch instance</em> button in the upper right corner:</p>
 
-<p><img src="./assets/images/ec2-instances-launch-instance.png" alt="Launch instance - instances list" /></p>
+<p><img src="/assets/images/ec2-instances-launch-instance.png" alt="Launch instance - instances list" /></p>
 
 <p>Both buttons will redirect your browser to the <em>Launch an instance</em> form.</p>
 
 <p>In the <em>Names and tags</em> section, enter a name for this instance in the <strong>Name</strong> field. This field is optional, but it will help identify <em>this</em> instance if you decide to create more than one instance.</p>
 
-<p><img src="./assets/images/instance-name.png" alt="Instance name" /></p>
+<p><img src="/assets/images/instance-name.png" alt="Instance name" /></p>
 
 <p>Under <em>Application and OS Images</em>, be sure to choose <strong>Amazon Linux 2 AMI (HVM)</strong>. Selecting a different AMI increases the difficulty of configuring the instance, as some of the options will not match the instructions given in the lecture.</p>
 
-<p><img src="./assets/images/os-selection.png" alt="AMI selection" /></p>
+<p><img src="/assets/images/os-selection.png" alt="AMI selection" /></p>
 
 <p>If you’re creating this instance as part of your AWS Academy training, you should have an existing SSH key, called <em>vockey.ppk</em>, which you can download from your AWS Academy portal. If not, you can create a new SSH key now, following the instructions below.</p>
 
@@ -115,11 +167,11 @@
 
 <p>Under the <em>Key Pair (login)</em> section, click the <em>Create new key pair</em> button:</p>
 
-<p><img src="./assets/images/key-pair.png" alt="Key pair options" /></p>
+<p><img src="/assets/images/key-pair.png" alt="Key pair options" /></p>
 
 <p>In the dialog which opens, give your key a name:</p>
 
-<p><img src="./assets/images/key-pair-dialog.png" alt="Key pair dialog" /></p>
+<p><img src="/assets/images/key-pair-dialog.png" alt="Key pair dialog" /></p>
 
 <p>For this document, we named the file <em>grcc-rsa-keyfile.pem</em>. Click <em>Create key pair</em> and select an easy-to-find location for your file when prompted. We recommend saving it to the root of the folder where your course files are located.</p>
 
@@ -160,17 +212,17 @@
 
 <p><strong>Almost done!</strong> Under <em>Network Settings</em>, ensure that all three Firewall options are checked:</p>
 
-<p><img src="./assets/images/network-settings.png" alt="Network settings" /></p>
+<p><img src="/assets/images/network-settings.png" alt="Network settings" /></p>
 
 <p>This will allow the wizard to create the correct inbound rules to allow your EC2 instance to receive HTTP and HTTPS requests.</p>
 
 <p>Click the <em>Launch instance</em> button to initiate the creation of your EC2 instance! Once the process completes, find and click on the instance identifier (<em>i-xxxxxxxxxxxxx</em>) in the success message:</p>
 
-<p><img src="./assets/images/success-with-instance-link.png" alt="Success dialog" /></p>
+<p><img src="/assets/images/success-with-instance-link.png" alt="Success dialog" /></p>
 
 <p>Clicking that link will take you to the overview of your new instance:</p>
 
-<p><img src="./assets/images/instance-dashboard.png" alt="Instance dashboard" /></p>
+<p><img src="/assets/images/instance-dashboard.png" alt="Instance dashboard" /></p>
 
 <p><strong>Next up:</strong> allocating a “permanent” IP address to your instance using Elastic IP.</p>
 
@@ -184,7 +236,7 @@ such as phpMyAdmin for managing our databases (you’ll do this step later in th
 
 <ol>
   <li>On the left side of your browser window, look for the section labeled <em>Network &amp; Security</em>, and then click on the <em>Elastic IPs</em> option:<br />
-<img src="./assets/images/network-security-menu.png" alt="Network security menu" /></li>
+<img src="/assets/images/network-security-menu.png" alt="Network security menu" /></li>
   <li>In the upper right corner of the next page, click on <em>Allocate Elastic IP address</em>.</li>
   <li>Leave all settings at their default and click the <em>Allocate</em> button. This will allocate an IP address to your account from the pool of available IP addresses.</li>
   <li>Once the page has reloaded, check the box for your new IP address, then find and click the <em>Actions</em> button in the upper right corner of your browser.</li>
@@ -218,55 +270,55 @@ such as phpMyAdmin for managing our databases (you’ll do this step later in th
 
 <h2 id="connecting-to-your-new-server">Connecting to Your New Server</h2>
 
-<p>You can connect to your server in many ways, but let’s look at two of them, WinSCP and the terminal. As the name suggests, WinSCP is only for the Windows operating system, but there are comparable programs available for macOS. How you connect is up to you, based on your personal preferences.</p>
+<p>You can connect to your server in many ways, but let’s look at two of them: WinSCP and the terminal. As the name suggests, WinSCP is only for the Windows operating system, but there are comparable programs available for macOS. How you connect is up to you, based on your personal preferences.</p>
 
 <h3 id="using-winscp">Using WinSCP</h3>
 
-<p>WinSCP is an integrated FTP and SSH client. If you are on a college laptop or on-campus computer, WinSCP is already installed. If you need to download it, you can do so from their website by visiting <a href="https://winscp.net/eng/downloads.php">https://winscp.net/eng/downloads.php</a>. Once WinSCP is installed, follow the steps below.</p>
+<p>WinSCP is an integrated FTP and SSH client. If you are on a college laptop or an on-campus computer, then WinSCP is already installed. If you need to download it, visit <a href="https://winscp.net/eng/downloads.php">https://winscp.net/eng/downloads.php</a>. Once WinSCP is installed, follow the steps below.</p>
 
 <p>Begin by opening WinSCP - you will presented with a Login window. In the <strong>Host</strong> name field, enter your domain name. In the <strong>Username</strong> field, enter <code>ec2-user</code> and leave the password field blank. Then, click the <strong>Advanced</strong> drop-down menu.</p>
 
-<p><img src="./assets/images/setup.png" alt="" /></p>
+<p><img src="/assets/images/setup.png" alt="" /></p>
 
 <p>In the <em>Advanced Site Settings</em> window, use the navigation panel on the left and click on <strong>Authentication</strong>, located under <em>SSH</em>, as shown below. We need to create a .ppk file from the .pem file you saved earlier. Open the <strong>Tools</strong> drop-down menu and choose <strong>Generate New Key Pair with PuTTYgen</strong>.</p>
 
-<p><img src="./assets/images/advanced-settings.png" alt="" /></p>
+<p><img src="/assets/images/advanced-settings.png" alt="" /></p>
 
 <p>In the PuTTY Key Generator, click the <strong>Load</strong> button. Navigate to where your .pem file is located and open it.</p>
 
-<p><img src="./assets/images/putty-keygen1.png" alt="" /></p>
+<p><img src="/assets/images/putty-keygen1.png" alt="" /></p>
 
 <p>The window will change to look like the image below. If you wish to secure your server further, enter a secure password in the <strong>Key passphrase</strong> field and again in the <strong>Confirm passphrase</strong> field. You will be prompted for this password each time you login. You may leave the field blank if you wish, but it will be less secure, and a warning will appear when you save the private key. To save the private key, click the <strong>Save private key</strong> button. Like your .pem file, save it somewhere secure where you can find it again. On a campus computer, you should save your key file to your <code>J:\\</code> drive in order to access it later.</p>
 
-<p><img src="./assets/images/putty-keygen2.png" alt="" /></p>
+<p><img src="/assets/images/putty-keygen2.png" alt="" /></p>
 
 <p>Back in the <em>Advanced Site Settings</em> window, the <strong>Private key file</strong> field should be populated with your .ppk file. If it isn’t, use the three dots menu (…) to choose your .ppk file. It should look like the image below. Click <strong>OK</strong> to continue.</p>
 
-<p><img src="./assets/images/advanced-settings.png" alt="" /></p>
+<p><img src="/assets/images/advanced-settings.png" alt="" /></p>
 
 <p>Double check your settings below and click <strong>Save</strong>.</p>
 
-<p><img src="./assets/images/setup.png" alt="" /></p>
+<p><img src="/assets/images/setup.png" alt="" /></p>
 
 <p>In the <em>Save session as site</em> dialog window, you can enter a descriptive name in the <strong>Site name</strong> field, or leave it as default. Then, click <strong>OK</strong> to finish saving your settings.</p>
 
-<p><img src="./assets/images/savesession.png" alt="" /></p>
+<p><img src="/assets/images/savesession.png" alt="" /></p>
 
 <p>Now, whenever you open WinSCP, your Login window should look like this.</p>
 
-<p><img src="./assets/images/savesession-login.png" alt="" /></p>
+<p><img src="/assets/images/savesession-login.png" alt="" /></p>
 
 <p>Choose <strong>Login</strong> to log onto your server. The first time you connect to your server, you may be prompted to confirm some settings. Also, if you entered a password for your key file, you will be prompted to enter that password before continuing. Once you clear any prompts, you are connected.</p>
 
-<p>You will now see the main window as shown below. The left panel is your local computer, and the right panel is your server (your EC2 instance). Each of these panels will show a list of folders (also referred to as “directories”) and files - these lists are collectively known as a <em>file tree</em>. The current location (the “active” or “current” directory) within each file system is shown in the blue bar above each file tree. If you previously completed <em>CIS-148 HTML Essentials</em>, this should look very similar to FileZilla.</p>
+<p>You will now see the main window as shown below. The left panel is your local computer, and the right panel is your server (your EC2 instance). Each of these panels will show a list of folders (also referred to as “directories”) and files - each of these lists is collectively known as a <em>file tree</em>. The current location (the “active” or “current” directory) within each file system is shown in the blue bar above each file tree. If you previously completed <em>CIS-148 HTML Essentials</em>, this should look very similar to FileZilla.</p>
 
 <p>To connect to your server via SSH, you will need to click on the <strong>Open session in PuTTY</strong> button.</p>
 
-<p><img src="./assets/images/opensession.png" alt="" /></p>
+<p><img src="/assets/images/opensession.png" alt="" /></p>
 
-<p>Again, the first time you do so, you may need to confirm some things in a series of dialog boxes. If you entered a password for your key file, you will need to enter to continue. If you see the terminal as shown below, you are connected and may skip to the <em>Set Up LAMP and phpMyAdmin</em> section.</p>
+<p>Again, the first time you do so, you may need to confirm some things in a series of dialog boxes. If you entered a password for your key file, you will need to enter it in order to continue. If you see the terminal as shown below, you are connected and may skip to the <em>Set Up LAMP and phpMyAdmin</em> section.</p>
 
-<p><img src="./assets/images/putty-cli.png" alt="" /></p>
+<p><img src="/assets/images/putty-cli.png" alt="" /></p>
 
 <h3 id="using-windows-terminal">Using Windows Terminal</h3>
 
@@ -375,7 +427,7 @@ such as phpMyAdmin for managing our databases (you’ll do this step later in th
 
 <p>The last command should print “enabled” — your Apache module is now running! Open your browser and type your domain into the navigation bar, then hit <kbd>Enter</kbd>. Your domain should load the Apache test page:</p>
 
-<p><img src="./assets/images/apache-test-page.png" alt="Apache test page" /></p>
+<p><img src="/assets/images/apache-test-page.png" alt="Apache test page" /></p>
 
 <p><strong>Congratulations!</strong> You now have a working web server! We’re not quite done yet — we need to update permissions on some files, and make sure that files which you will upload later have the correct permissions automatically.</p>
 
@@ -589,7 +641,7 @@ such as phpMyAdmin for managing our databases (you’ll do this step later in th
 </code></pre>
 
 <p>Replace <em>your_domain</em> with your domain name. You should now see the phpMyAdmin login screen:<br />
-<img src="./assets/images/phpMyAdmin.png" alt="phpMyAdmin login screen" /></p>
+<img src="/assets/images/phpMyAdmin.png" alt="phpMyAdmin login screen" /></p>
 
 <p>Login using “root” as the username and using the MariaDB password which you created above. You should now be logged in! <strong>Great job!</strong></p>
 
@@ -671,8 +723,8 @@ such as phpMyAdmin for managing our databases (you’ll do this step later in th
      
             </main>
          
-            <footer class="page-content border-top my-2">
-                <div class="text-center container-fluid">
+            <footer id="footer" class="border-top py-3">
+                <div class="text-center">
                     <p class="mb-1">
                         GRCC Technology Learning Center &copy; 2023 - 2024
                     </p>
@@ -699,11 +751,20 @@ such as phpMyAdmin for managing our databases (you’ll do this step later in th
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha256-E4RlfxwyJVmkkk0szw7LYJxuPlp6evtPSBDlWHsYYL8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
     
-    <script src="./assets/js/bootbox.all.min.js"></script>
-    <script src="./assets/js/prism.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="/assets/js/bootbox.all.min.js"></script>
+    <script src="/assets/js/prism.js"></script>
+    <script src="/assets/js/main.js"></script>
 
       
+
+    <div class="bb-scroll-widget">
+        <a href="#" class="back-to-top">
+            <span class="fa-stack">
+                <i class="fas fa-square fa-stack-2x"></i>
+                <i class="fas fa-arrow-up fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </div>
 </body>
 
 </html>
