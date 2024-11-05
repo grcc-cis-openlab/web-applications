@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Development Tools for HTML
+title: Local Development Tools for Python
 pageKey: cis116-dev-tools
 permalink: /cis116-dev-tools
 ---
