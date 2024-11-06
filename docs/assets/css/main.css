@@ -86,4 +86,20 @@ div.code-toolbar > .toolbar > .toolbar-item > button:hover, div.code-toolbar > .
 
 .bb-scroll-widget .back-to-top > i { padding: 5px; }
 
+#lunrsearchresults #search-results { list-style: none; margin: 0 1rem 1rem; padding: 0; }
+
+#lunrsearchresults #search-results .lunrsearchresult { font-size: 0.85rem; padding: 0; margin-bottom: 1.5rem; display: block; color: rgba(0, 0, 0, 0.65); }
+
+#lunrsearchresults #search-results .lunrsearchresult:last-child { margin-bottom: 0; }
+
+#lunrsearchresults #search-results .lunrsearchresult .title, #lunrsearchresults #search-results .lunrsearchresult .body, #lunrsearchresults #search-results .lunrsearchresult .url { display: block; }
+
+#lunrsearchresults #search-results .lunrsearchresult .title { color: #007bff; font-size: 1.25rem; }
+
+#lunrsearchresults #search-results .lunrsearchresult .body { margin-bottom: 0.25rem; color: rgba(0, 0, 0, 0.5); }
+
+#lunrsearchresults #search-results .lunrsearchresult .url { color: rgba(0, 123, 255, 0.65); font-size: 0.85rem; font-style: italic; }
+
+#lunrsearchresults #search-results .lunrsearchresult a:hover, #lunrsearchresults #search-results .lunrsearchresult a:focus { background: none; box-shadow: none; }
+
 /*# sourceMappingURL=main.css.map */

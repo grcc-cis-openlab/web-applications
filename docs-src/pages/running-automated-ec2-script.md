@@ -3,6 +3,7 @@ layout: default
 title: Automated AWS EC2 Installation
 pageKey: running-automated-ec2-script
 permalink: /running-automated-ec2-script
+searchable: true
 ---
 
 # Automated AWS EC2 Installation

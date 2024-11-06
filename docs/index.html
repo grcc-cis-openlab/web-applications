@@ -41,8 +41,8 @@
                 </a>
             </li>
         </ul>
-        <form class="d-flex me-2" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        <form id="search-form" class="d-flex me-2" role="search">
+            <input id="search" name="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
             <button class="btn btn-outline-light" type="submit">
                 <i class="fas fa-search"></i>
                 <span class="sr-only">Search</span>
@@ -133,8 +133,8 @@ and may not reflect other college or university outcomes or best practices as fo
 
 <h3 id="web-development">Web Development</h3>
 
-<p>CIS-241 &amp; CIS-247 utilize Amazon Web Services (AWS) and it’s Elastic Cloud Computing (EC2) service to host a Linux 
-web server virtual machine (VM) to which students deploy their code. This process can be tricky, so we’ve developed the 
+<p>CIS-241 &amp; CIS-247 utilize Amazon Web Services (AWS) and it's Elastic Cloud Computing (EC2) service to host a Linux 
+web server virtual machine (VM) to which students deploy their code. This process can be tricky, so we've developed the 
 following tutorials:</p>
 
 <ul>
@@ -181,6 +181,10 @@ steps described in the <em>Setting Up an AWS EC2 LAMP Server</em> tutorial.</p>
     <script src="assets/js/bootbox.all.min.js"></script>
     <script src="assets/js/prism.js"></script>
     <script src="assets/js/main.js"></script>
+    
+    <script src="assets/js/jquery.mark.js"></script>
+    <script src="assets/js/lunr.js"></script>
+    <script src="assets/js/search.js"></script>
 
       
 

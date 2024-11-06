@@ -3,6 +3,7 @@ layout: default
 title: Local Development Tools for Python
 pageKey: cis116-dev-tools
 permalink: /cis116-dev-tools
+searchable: true
 ---
 
 # Setting Up a Local Development Environment

@@ -41,8 +41,8 @@
                 </a>
             </li>
         </ul>
-        <form class="d-flex me-2" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        <form id="search-form" class="d-flex me-2" role="search">
+            <input id="search" name="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
             <button class="btn btn-outline-light" type="submit">
                 <i class="fas fa-search"></i>
                 <span class="sr-only">Search</span>
@@ -124,7 +124,7 @@
             <main id="main" role="main">   
                 <h1 id="automated-aws-ec2-installation">Automated AWS EC2 Installation</h1>
 
-<p>For Grand Rapids Community College’s Web Applications I &amp; II (CIS 241 &amp; CIS 247) classes.</p>
+<p>For Grand Rapids Community College's Web Applications I &amp; II (CIS 241 &amp; CIS 247) classes.</p>
 
 <p>This repository will help students in the creation of a web server with PHP support in Amazon Web Services (AWS) using a provided shell script.</p>
 
@@ -139,7 +139,7 @@
   <li>In the box under DNS Check, enter your domain name and press <kbd>Enter</kbd> or press the search button.</li>
   <li>You will get a green check mark if your domain has been added to the DNS server. Once you see green check marks, you are ready to continue.
     <ul>
-      <li>If you aren’t getting green check marks, double check your instructions on how to setup your DNS records.</li>
+      <li>If you aren't getting green check marks, double check your instructions on how to setup your DNS records.</li>
     </ul>
   </li>
 </ol>
@@ -154,7 +154,7 @@
 
 <h4 id="using-winscp">Using WinSCP</h4>
 
-<p>If you are using WinSCP, you can <a href="https://raw.githubusercontent.com/grcc-cis-openlab/web-applications/bca7f34cf38b8367765c7a768bb659703297434c/install-lamp-secure.sh">download <code>install-lamp-secure.sh</code> from this repository</a> and use the WinSCP GUI to upload the file to ec2-user’s personal home directory. This will make the script easy to locate when you need to run it in a few moments. Once you’ve uploaded the script file, click on the <code>Open session in PuTTY</code> button and move on to <a href="#running-the-script">Running the Script</a></p>
+<p>If you are using WinSCP, you can <a href="https://raw.githubusercontent.com/grcc-cis-openlab/web-applications/bca7f34cf38b8367765c7a768bb659703297434c/install-lamp-secure.sh">download <code>install-lamp-secure.sh</code> from this repository</a> and use the WinSCP GUI to upload the file to ec2-user's personal home directory. This will make the script easy to locate when you need to run it in a few moments. Once you've uploaded the script file, click on the <code>Open session in PuTTY</code> button and move on to <a href="#running-the-script">Running the Script</a></p>
 
 <h4 id="using-the-terminal">Using the Terminal</h4>
 
@@ -170,7 +170,7 @@
 <p>If you prefer, you can create the script using the built-in text editor in Linux called Nano. (<a href="https://linuxize.com/post/how-to-use-nano-text-editor/">How to Use Nano (external)</a>)</p>
 
 <ol>
-  <li>On your Linux terminal screen, verify you are in the <code>ec2-user</code> home directory (‘~’) by entering:
+  <li>On your Linux terminal screen, verify you are in the <code>ec2-user</code> home directory ('~') by entering:
     <pre><code class="language-shell"> cd ~
 </code></pre>
   </li>
@@ -184,7 +184,7 @@
   <li>Save the file by pressing <kbd>Ctrl</kbd> + <kbd>X</kbd>, type <code>y</code>, and then press <kbd>Enter</kbd> to confirm the save. Hit <kbd>Enter</kbd> again to accept the file name.</li>
 </ol>
 
-<p>You’re now ready to run the script.</p>
+<p>You're now ready to run the script.</p>
 
 <h2 id="running-the-script">Running the Script</h2>
 
@@ -198,9 +198,9 @@
 
 <h3 id="actually-run-the-script">Actually Run the Script</h3>
 
-<p>(If you aren’t already, connect to your server using SSH or the AWS Connect function.)</p>
+<p>(If you aren't already, connect to your server using SSH or the AWS Connect function.)</p>
 
-<p>Verify you are in the <code>ec2-user</code> home directory (‘~’):</p>
+<p>Verify you are in the <code>ec2-user</code> home directory ('~'):</p>
 
 <pre><code class="language-shell">cd ~
 </code></pre>
@@ -210,7 +210,7 @@
 <pre><code class="language-shell">bash install-lamp-secure.sh
 </code></pre>
 
-<p>If your script doesn’t run, you may need to make it executable:</p>
+<p>If your script doesn't run, you may need to make it executable:</p>
 
 <pre><code class="language-shell">chmod +x install-lamp-secure.sh
 </code></pre>
@@ -248,6 +248,10 @@
     <script src="assets/js/bootbox.all.min.js"></script>
     <script src="assets/js/prism.js"></script>
     <script src="assets/js/main.js"></script>
+    
+    <script src="assets/js/jquery.mark.js"></script>
+    <script src="assets/js/lunr.js"></script>
+    <script src="assets/js/search.js"></script>
 
       
 

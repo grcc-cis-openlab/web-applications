@@ -1,9 +1,6 @@
 
     let idx;
     let docs = [];
-    let $searchForm = $('#search-form');
-    let $searchBox = $('#lunrsearch');
-    let $lunrOutput = $('#lunrsearchresults');
     let $clearBtn = $('<button type="button" class="btn btn-clear"><i class="fas fa-times"></i> Clear results</button>');
 
     $(function(){
@@ -24,22 +21,22 @@
         }).fail(function(jqxhr, status, err){
             console.log(err);
         });
+
+        let $searchForm = $('#search-form');
+        let $searchBox = $('#search');
+        $searchForm.on('submit', function(e) {
+            e.preventDefault();
+    
+            lunr_search($searchBox.val());
+        });
     });
 
     function lunr_search(term) {
-        $lunrOutput.empty();
+        //$lunrOutput.empty();
+        let $lunrOutput = $('<div id="lunrsearchresults"></div>')
         let $output = $('<ul id="search-results"></ul>');
 
-        if(term) {
-            $lunrOutput.html($clearBtn);
-           
-            $clearBtn.off('click');
-            $clearBtn.on('click', function(e) {
-                e.preventDefault();
-
-                $lunrOutput.empty();
-            });
-            
+        if(term) {            
             let results = idx.search(term);
             if(results.length > 0){
                 results.forEach(function (result) {
@@ -54,19 +51,19 @@
                             let content = result.matchData.metadata[key].body;
                             if(content) {
                                 let pos = content.position[0];
-                                body = '&hellip;' + doc.body.substring(pos[0] - 60, pos[0] + pos[1] + 60) + '&hellip;';
+                                body = '&hellip;' + doc.body.substring(pos[0] - 300, pos[0] + pos[1] + 300) + '&hellip;';
                             }
                             else {
-                                body = doc.body.substring(0, 60) + '&hellip;';
+                                body = doc.body.substring(0, 300) + '&hellip;';
                             }
                         }
                         else {
-                            body = doc.body.substring(0, 60) + '&hellip;';
+                            body = doc.body.substring(0, 300) + '&hellip;';
                         }
                         
                         // Highlight matches in snippet
-                        let r = $('<div><span class="body">' + body + '</span></div>').mark(term);
-                        $output.append('<li class="lunrsearchresult"><a href="./' + url + '"><span class="title">' + title + '</span>' + r.html() + '<span class="url">' + url + '</span></a></li>');
+                        let r = $('<div><div class="body">' + body + '</div></div>').mark(term);
+                        $output.append('<li class="lunrsearchresult"><h4 class="title"><a href=".' + url + '">' + title + '</a></h4>' + r.html() + '<a href=".' + url + '" class="url">' + location.origin + url + '</a></li>');
                     }
                 });
             } 
@@ -76,10 +73,11 @@
         }
         
         $lunrOutput.append($output);
+
+        bootbox.dialog({
+            title: 'Search results',
+            message: $lunrOutput,
+            size: 'xl',
+            closeBtn: true
+        });
     }
-
-    $searchForm.on('submit', function(e) {
-        e.preventDefault();
-
-        lunr_search($searchBox.val());
-    });
