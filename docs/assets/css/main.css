@@ -86,22 +86,20 @@ div.code-toolbar > .toolbar > .toolbar-item > button:hover, div.code-toolbar > .
 
 .bb-scroll-widget .back-to-top > i { padding: 5px; }
 
-#lunrsearchresults .lunrsearchresult { font-size: 0.85rem; padding: 0.5rem 1rem; margin-bottom: 0.5rem; }
+#lunrsearchresults #search-results { list-style: none; margin: 0 1rem 1rem; padding: 0; }
 
-#lunrsearchresults .lunrsearchresult:last-child { margin-bottom: 1rem; }
+#lunrsearchresults #search-results .lunrsearchresult { font-size: 0.85rem; padding: 0; margin-bottom: 1.5rem; display: block; color: rgba(0, 0, 0, 0.65); }
 
-#lunrsearchresults .lunrsearchresult .title, #lunrsearchresults .lunrsearchresult .body, #lunrsearchresults .lunrsearchresult .url, #lunrsearchresults .lunrsearchresult a { display: block; color: rgba(0, 0, 0, 0.65); text-decoration: none; }
+#lunrsearchresults #search-results .lunrsearchresult:last-child { margin-bottom: 0; }
 
-#lunrsearchresults .lunrsearchresult .title { color: #007bff; }
+#lunrsearchresults #search-results .lunrsearchresult .title, #lunrsearchresults #search-results .lunrsearchresult .body, #lunrsearchresults #search-results .lunrsearchresult .url { display: block; }
 
-#lunrsearchresults .lunrsearchresult .body { margin-bottom: 0.25rem; color: rgba(0, 0, 0, 0.5); }
+#lunrsearchresults #search-results .lunrsearchresult .title { color: #007bff; font-size: 1.25rem; }
 
-#lunrsearchresults .lunrsearchresult .url { color: rgba(0, 0, 0, 0.65); font-size: 0.85rem; font-style: italic; }
+#lunrsearchresults #search-results .lunrsearchresult .body { margin-bottom: 0.25rem; color: rgba(0, 0, 0, 0.5); }
 
-#lunrsearchresults .lunrsearchresult a { color: #007bff; }
+#lunrsearchresults #search-results .lunrsearchresult .url { color: rgba(0, 123, 255, 0.65); font-size: 0.85rem; font-style: italic; }
 
-#lunrsearchresults .lunrsearchresult a:hover, #lunrsearchresults .lunrsearchresult .lunrsearchresult a:focus { text-decoration: none; background: none; box-shadow: none; }
-
-#lunrsearchresults .lunrsearchresult .title:hover { text-decoration: underline; }
+#lunrsearchresults #search-results .lunrsearchresult a:hover, #lunrsearchresults #search-results .lunrsearchresult a:focus { background: none; box-shadow: none; }
 
 /*# sourceMappingURL=main.css.map */

@@ -295,62 +295,58 @@ div.code-toolbar > .toolbar > .toolbar-item > button
 
 
 #lunrsearchresults 
-{   
-    .lunrsearchresult 
+{
+    #search-results
     {
-        font-size: 0.85rem;
-        padding: 0.5rem 1rem;
-        margin-bottom: 0.5rem;
+        list-style: none;
+        margin: 0 1rem 1rem;
+        padding: 0;
 
-        &:last-child
+        .lunrsearchresult 
         {
-            margin-bottom: 1rem;
-        }
-        
-        .title, 
-        .body,
-        .url, 
-        a
-        {
+            font-size: 0.85rem;
+            padding: 0;
+            margin-bottom: 1.5rem;
             display: block;
             color: rgba(0,0,0,0.65);
-            text-decoration: none;
+    
+            &:last-child
+            {
+                margin-bottom: 0;
+            }
+            
+            .title, 
+            .body,
+            .url
+            {
+                display: block;
+            }
+    
+            .title 
+            {
+                color: #007bff;
+                font-size: 1.25rem;
+            }
+    
+            .body
+            {
+                margin-bottom: 0.25rem;
+                color: rgba(0,0,0,0.5);
+            }
+    
+            .url 
+            {
+                color: rgba(#007bff,0.65);
+                font-size: 0.85rem;
+                font-style: italic;
+            }
+    
+            a:hover, 
+            a:focus 
+            {
+                background: none;
+                box-shadow: none;
+            }
         }
-
-        .title 
-        {
-            color: #007bff;
-        }
-
-        .body
-        {
-            margin-bottom: 0.25rem;
-            color: rgba(0,0,0,0.5);
-        }
-
-        .url 
-        {
-            color: rgba(0,0,0,0.65);
-            font-size: 0.85rem;
-            font-style: italic;
-        }
-
-        a 
-        {
-            color: #007bff;
-        }
-
-        a:hover, 
-        .lunrsearchresult a:focus 
-        {
-            text-decoration: none;
-            background: none;
-            box-shadow: none;
-        }
-
-        .title:hover  
-        {
-            text-decoration: underline;
-        }
-    }
+    }    
 }

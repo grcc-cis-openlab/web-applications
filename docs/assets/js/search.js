@@ -62,8 +62,8 @@
                         }
                         
                         // Highlight matches in snippet
-                        let r = $('<div><span class="body">' + body + '</span></div>').mark(term);
-                        $output.append('<li class="lunrsearchresult"><a href=".' + url + '"><span class="title">' + title + '</span></a>' + r.html() + '<span class="url">' + location.origin + url + '</span></li>');
+                        let r = $('<div><div class="body">' + body + '</div></div>').mark(term);
+                        $output.append('<li class="lunrsearchresult"><h4 class="title"><a href=".' + url + '">' + title + '</a></h4>' + r.html() + '<a href=".' + url + '" class="url">' + location.origin + url + '</a></li>');
                     }
                 });
             } 

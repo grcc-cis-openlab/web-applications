@@ -27,7 +27,7 @@ Jekyll::Hooks.register :site, :post_write do |site|
             content = page['content']
 
             if content != nil then
-                body = Loofah.fragment(content).scrub!(:strip).text.strip
+                body = Loofah.html5_fragment(content).scrub!(:strip).text.strip
 
                 # Need to build a JSON object, like so:
                 # { "id":"", "title":"", "body":"", "url":"" }
