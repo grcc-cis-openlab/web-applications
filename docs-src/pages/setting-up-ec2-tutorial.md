@@ -3,6 +3,7 @@ layout: default
 title: Setting Up an AWS EC2 LAMP Server
 pageKey: setting-up-ec2-tutorial
 permalink: ./setting-up-ec2-tutorial
+searchable: true
 ---
 
 # Setting Up an AWS EC2 LAMP Server

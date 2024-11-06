@@ -86,4 +86,22 @@ div.code-toolbar > .toolbar > .toolbar-item > button:hover, div.code-toolbar > .
 
 .bb-scroll-widget .back-to-top > i { padding: 5px; }
 
+#lunrsearchresults .lunrsearchresult { font-size: 0.85rem; padding: 0.5rem 1rem; margin-bottom: 0.5rem; }
+
+#lunrsearchresults .lunrsearchresult:last-child { margin-bottom: 1rem; }
+
+#lunrsearchresults .lunrsearchresult .title, #lunrsearchresults .lunrsearchresult .body, #lunrsearchresults .lunrsearchresult .url, #lunrsearchresults .lunrsearchresult a { display: block; color: rgba(0, 0, 0, 0.65); text-decoration: none; }
+
+#lunrsearchresults .lunrsearchresult .title { color: #007bff; }
+
+#lunrsearchresults .lunrsearchresult .body { margin-bottom: 0.25rem; color: rgba(0, 0, 0, 0.5); }
+
+#lunrsearchresults .lunrsearchresult .url { color: rgba(0, 0, 0, 0.65); font-size: 0.85rem; font-style: italic; }
+
+#lunrsearchresults .lunrsearchresult a { color: #007bff; }
+
+#lunrsearchresults .lunrsearchresult a:hover, #lunrsearchresults .lunrsearchresult .lunrsearchresult a:focus { text-decoration: none; background: none; box-shadow: none; }
+
+#lunrsearchresults .lunrsearchresult .title:hover { text-decoration: underline; }
+
 /*# sourceMappingURL=main.css.map */

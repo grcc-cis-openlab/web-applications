@@ -3,6 +3,7 @@ layout: default
 title: Development Tools for HTML
 pageKey: html-essentials-dev-tools
 permalink: /html-essentials-dev-tools
+searchable: true
 ---
 
 # Choosing an editor

@@ -292,3 +292,65 @@ div.code-toolbar > .toolbar > .toolbar-item > button
         }
     }
 }
+
+
+#lunrsearchresults 
+{   
+    .lunrsearchresult 
+    {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+        margin-bottom: 0.5rem;
+
+        &:last-child
+        {
+            margin-bottom: 1rem;
+        }
+        
+        .title, 
+        .body,
+        .url, 
+        a
+        {
+            display: block;
+            color: rgba(0,0,0,0.65);
+            text-decoration: none;
+        }
+
+        .title 
+        {
+            color: #007bff;
+        }
+
+        .body
+        {
+            margin-bottom: 0.25rem;
+            color: rgba(0,0,0,0.5);
+        }
+
+        .url 
+        {
+            color: rgba(0,0,0,0.65);
+            font-size: 0.85rem;
+            font-style: italic;
+        }
+
+        a 
+        {
+            color: #007bff;
+        }
+
+        a:hover, 
+        .lunrsearchresult a:focus 
+        {
+            text-decoration: none;
+            background: none;
+            box-shadow: none;
+        }
+
+        .title:hover  
+        {
+            text-decoration: underline;
+        }
+    }
+}

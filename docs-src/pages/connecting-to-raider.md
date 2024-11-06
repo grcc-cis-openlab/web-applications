@@ -3,6 +3,7 @@ layout: default
 title: Connecting to the GRCC Raider Web Server
 pageKey: connecting-to-raider
 permalink: /connecting-to-raider
+searchable: true
 ---
 
 # Connecting to the GRCC Raider Web Server

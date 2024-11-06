@@ -41,8 +41,8 @@
                 </a>
             </li>
         </ul>
-        <form class="d-flex me-2" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        <form id="search-form" class="d-flex me-2" role="search">
+            <input id="search" name="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
             <button class="btn btn-outline-light" type="submit">
                 <i class="fas fa-search"></i>
                 <span class="sr-only">Search</span>
@@ -134,9 +134,9 @@ such as Blackboard. Once this account is created, you can access your web direct
 <p>replacing <em>yourusername</em> with your GRCC username.</p>
 
 <p>The process of uploading your content to Raider relies on a technology called <em>Secure File Transfer Protocol</em>, or <strong>SFTP</strong>. SFTP uses an encrypted connection to connect 
-to the web server, which then allows you to copy files from your computer (referred to as the “local instance”) to another computer (the “remote instance”, usually a server).</p>
+to the web server, which then allows you to copy files from your computer (referred to as the "local instance") to another computer (the "remote instance", usually a server).</p>
 
-<p>Most operating systems include basic commandline utilities that can be used to perform SFTP, but it’s generally easier for beginners to use a desktop application. We have included 
+<p>Most operating systems include basic commandline utilities that can be used to perform SFTP, but it's generally easier for beginners to use a desktop application. We have included 
 instructions below for setting up two popular SFTP programs — choose one.</p>
 
 <h3 id="using-filezilla">Using FileZilla</h3>
@@ -157,7 +157,7 @@ be able to connect to Raider.</li>
   <li>Click the <strong>Connect</strong> button at the bottom of the dialog. <strong>Done!</strong></li>
 </ol>
 
-<p>Assuming everything was entered properly, FileZilla will connect to your Raider account. You’ll see the right side of the application (the <em>Remote site</em> panes) reload to display the current contents of your web directory.</p>
+<p>Assuming everything was entered properly, FileZilla will connect to your Raider account. You'll see the right side of the application (the <em>Remote site</em> panes) reload to display the current contents of your web directory.</p>
 
 <h3 id="using-cyberduck">Using Cyberduck</h3>
 
@@ -174,21 +174,21 @@ be able to connect to Raider.</li>
   <li>Click the <strong>Connect</strong> button. <strong>Done!</strong></li>
 </ol>
 
-<p>Assuming everything was entered properly, Cyberduck will connect to your Raider account. You’ll see the application reload to display the current contents of your web directory.</p>
+<p>Assuming everything was entered properly, Cyberduck will connect to your Raider account. You'll see the application reload to display the current contents of your web directory.</p>
 
 <h2 id="uploading-files">Uploading Files</h2>
 
 <p>At this point, you can use FileZilla or Cyberduck to navigate to the <em>web_docs</em> directory. You must upload your files to <em>web_docs</em> — this is what is known as the <em>site root</em>, the public directory from which the web server will respond to requests.</p>
 
-<p>For each assignment, you’ll normally upload a folder; for example, the first assignment is usually saved locally in a folder named <em>Unit1</em>. You’ll upload this folder to <em>web_docs</em>. 
-You’ll wind up with a directory structure on Raider that looks something like:</p>
+<p>For each assignment, you'll normally upload a folder; for example, the first assignment is usually saved locally in a folder named <em>Unit1</em>. You'll upload this folder to <em>web_docs</em>. 
+You'll wind up with a directory structure on Raider that looks something like:</p>
 
 <pre><code>- web_docs
     - Unit1
         - index.html
 </code></pre>
 
-<p>To view this file, you’ll enter the following in your web browser’s navigation bar:</p>
+<p>To view this file, you'll enter the following in your web browser's navigation bar:</p>
 
 <pre><code class="language-http">htttps://raider.grcc.edu/~yourusername/Unit1/index.html
 </code></pre>
@@ -231,6 +231,10 @@ You’ll wind up with a directory structure on Raider that looks something like:
     <script src="assets/js/bootbox.all.min.js"></script>
     <script src="assets/js/prism.js"></script>
     <script src="assets/js/main.js"></script>
+    
+    <script src="assets/js/jquery.mark.js"></script>
+    <script src="assets/js/lunr.js"></script>
+    <script src="assets/js/search.js"></script>
 
       
 

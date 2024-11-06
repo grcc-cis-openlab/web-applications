@@ -3,6 +3,7 @@ layout: default
 title: 'CIS-116 First Program: Hello, World!'
 pageKey: cis116-first-program
 permalink: /cis116-first-program
+searchable: true
 ---
 
 # Creating Your First Program

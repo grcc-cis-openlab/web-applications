@@ -35,5 +35,6 @@ gem "bigdecimal"
 gem "json"
 gem "nokogiri"
 gem "loofah"
+gem "commonmarker"
 gem 'eventmachine', '1.2.7', git: 'https://github.com/eventmachine/eventmachine.git', tag: 'v1.2.7'
 gem "webrick", "~> 1.7"

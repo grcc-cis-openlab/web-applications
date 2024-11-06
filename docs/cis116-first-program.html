@@ -41,8 +41,8 @@
                 </a>
             </li>
         </ul>
-        <form class="d-flex me-2" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        <form id="search-form" class="d-flex me-2" role="search">
+            <input id="search" name="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
             <button class="btn btn-outline-light" type="submit">
                 <i class="fas fa-search"></i>
                 <span class="sr-only">Search</span>
@@ -131,12 +131,12 @@
 
 <hr />
 
-<p>One major advantage to using Python as an introductory course is that it’s really easy to get instant feedback — Python can be executed from the command line
+<p>One major advantage to using Python as an introductory course is that it's really easy to get instant feedback — Python can be executed from the command line
 (console) without starting up a code editor.</p>
 
 <ol>
-  <li>Start your operating system’s console application. For Windows users, this can be the command line (cmd), Powershell, or the Terminal application. For Linux and macOS users, this will (normally) be the Terminal application.</li>
-  <li>Switch to “Python mode” by typing <code>py</code>. You should see something similar to
+  <li>Start your operating system's console application. For Windows users, this can be the command line (cmd), Powershell, or the Terminal application. For Linux and macOS users, this will (normally) be the Terminal application.</li>
+  <li>Switch to "Python mode" by typing <code>py</code>. You should see something similar to
     <pre><code class="language-ps">Python 3.12.4 (tags/v3.12.4:8e8a4ba, Jun  6 2024, 19:30:16) [MSC v.1940 64 bit (AMD64)] on win32
 Type "help", "copyright", "credits" or "license" for more information.
 &gt;&gt;&gt;
@@ -145,7 +145,7 @@ Type "help", "copyright", "credits" or "license" for more information.
   <li>Type the following line of code at the prompt (<code>&gt;&gt;&gt;</code>), and then press <kbd>Enter</kbd>:
     <pre><code class="language-python">print('Hello, world!')
 </code></pre>
-    <p>Your terminal will print the quoted value <em>‘Hello, world!’</em>. Congratulations! You’ve written <em>and</em> executed your first Python program!</p>
+    <p>Your terminal will print the quoted value <em>'Hello, world!'</em>. Congratulations! You've written <em>and</em> executed your first Python program!</p>
   </li>
 </ol>
 
@@ -158,11 +158,11 @@ Type "help", "copyright", "credits" or "license" for more information.
 <pre><code class="language-python">print('Hello, world!')
 </code></pre>
 
-<p>This is what’s known as <em>source code</em> (or more commonly, just <em>code</em>). It’s an instruction requesting your computer to execute an action; in this case, to 
-output a series of characters to the console window in which the code was entered. This “series of characters” is referred to as a <em>string</em> when creating Python 
+<p>This is what's known as <em>source code</em> (or more commonly, just <em>code</em>). It's an instruction requesting your computer to execute an action; in this case, to 
+output a series of characters to the console window in which the code was entered. This "series of characters" is referred to as a <em>string</em> when creating Python 
 code, and is denoted by the opening and closing quotation marks. In Python, both single-quotes (<code>'</code>) and double-quotes (<code>"</code>) are acceptable when creating strings.</p>
 
-<p>The text which surrounds our string, <code>print( )</code> is what’s known as a <em>function</em>. In simple terms, it’s a command which is defined as part of the Python language 
+<p>The text which surrounds our string, <code>print( )</code> is what's known as a <em>function</em>. In simple terms, it's a command which is defined as part of the Python language 
 and which outputs the given content (the value entered after the <code>(</code> character and before the <code>)</code> character) to the console window. You will learn more built-in 
 functions as you progress through your Python course, and eventually learn how to create your own.</p>
 
@@ -207,6 +207,10 @@ functions as you progress through your Python course, and eventually learn how t
     <script src="assets/js/bootbox.all.min.js"></script>
     <script src="assets/js/prism.js"></script>
     <script src="assets/js/main.js"></script>
+    
+    <script src="assets/js/jquery.mark.js"></script>
+    <script src="assets/js/lunr.js"></script>
+    <script src="assets/js/search.js"></script>
 
       
 
