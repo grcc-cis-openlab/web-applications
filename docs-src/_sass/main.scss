@@ -151,6 +151,17 @@ body
             color: $primary;
             font-weight: 600;
         }
+
+        #marquee-logo
+        {
+            margin-bottom: 3rem;
+
+            img
+            {
+                box-shadow: none;
+                max-width: 400px;
+            }
+        }
     }
 }
 

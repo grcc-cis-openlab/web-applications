@@ -44,6 +44,10 @@ body { font-size: 1rem; }
 
 .main-content #main i, .main-content #main em { color: #032c4d; font-weight: 600; }
 
+.main-content #main #marquee-logo { margin-bottom: 3rem; }
+
+.main-content #main #marquee-logo img { box-shadow: none; max-width: 400px; }
+
 @media (min-width: 768px) { .main-content { margin-left: 300px; } }
 
 /* Navbar */
