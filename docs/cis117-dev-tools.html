@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
     
-    <title> &mdash; GRCC Technology Learning Center</title>
+    <title>Local Development Tools for Java &mdash; GRCC Technology Learning Center</title>
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Bree+Serif&display=swap" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -122,14 +122,63 @@
 
         <div class="main-content">
             <main id="main" role="main">   
-                <div id="marquee-logo">
-  <p><img src="assets/images/grcc-logo.svg" alt="GRCC" /></p>
-</div>
+                <h1 id="setting-up-a-local-development-environment">Setting Up a Local Development Environment</h1>
 
-<h1 id="welcome">Welcome!</h1>
+<p>CIS-117, Java Programming I, teaches students the basics the programming language <em>Java</em>, using the 
+<a href="https://www.zybooks.com/"><em>zyBooks</em></a> learning platform. With zyBooks, there's no requirement to install any software on your 
+computer — all of your course material is provided and executed with your web browser.</p>
 
-<p>The following content is maintained on behalf of the <a href="https://www.grcc.edu/students-resources/academic-support-tutoring-services/technology-learning-center">GRCC Technology Learning Center</a>. This website is intended as a educational resource for students of the Computer Information Systems (CIS) and Mechanical, Drafting, &amp; Engineering departments. The content herein is free for anyone to browse and use, but be aware that the content is targeted to our coursework and may not reflect other college or university outcomes or best practices as followed by the general development community.</p>
+<p>Sometimes, however, you may run into an issue in zyBooks where your code <em>looks</em> like it should work, but either it doesn't, 
+or the zyBooks autograder reports invalid results when testing your code. For this reason, it's useful to install a Java code editor locally 
+(on your computer), which allows you to run your code outside of zyBooks. This also allows you to experiment, if you wish to 
+try alternate methods of completing an assignment (or just wanted to try something new!).</p>
 
+<p>Compiling (the process of converting the code which you wrote into something a computer can execute) Java code requires installing the Java Development Kit (JDK). You can install the JDK by visiting <a href="https://www.oracle.com/java/technologies/downloads/">https://www.oracle.com/java/technologies/downloads/</a>.</p>
+
+<p><img src="assets/images/jdk-download.png" alt="Download JDK" /></p>
+
+<p>Once the download is complete, launch the installer:</p>
+
+<p><img src="assets/images/install-jdk.png" alt="Install JDK" /></p>
+
+<p>Once the JDK has finished installing, you'll want to install a code editor. Here are a few options which we recommend:</p>
+
+<h2 id="visual-studio-code">Visual Studio Code</h2>
+
+<p>Visual Studio Code, also known as VSCode, (not to be confused with the Visual Studio IDE) is a simplified, multi-language code editor from Microsoft, available 
+for free at <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>. No license is needed to download and install VSCode. It does not have Java code support out of the box, but the free extension <em>Extension Pack for Java</em> is available from Microsoft which will add all of the tools needed: <a href="https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack">https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack</a></p>
+
+<p><img src="assets/images/vscode-java-extension-pack.png" alt="Extension Pack for Java" /></p>
+
+<h2 id="intellij">IntelliJ</h2>
+
+<p>IntelliJ IDEA is an IDE (integrated development environment) from JetBrains, available for download at <a href="https://www.jetbrains.com/idea/">https://www.jetbrains.com/idea/</a>.</p>
+
+<p>IntelliJ IDEA is a commercial software application, but JetBrains offers free licenses to student and educators, as well as a free Community Edition. You can acquire a student license by visiting <a href="https://www.jetbrains.com/community/education/#students">https://www.jetbrains.com/community/education/#students</a> and clicking the <strong>Apply now</strong> button. You'll use your student email address (yourname@email.grcc.edu) to create an account, and once you've verified your email address you'll have access to IntelliJ IDEA (and other IDEs) as long as you remain a student. If you prefer to use the Community Edition, visit the main IDEA page above and click <strong>Download</strong>. Scroll down to the <em>Community Edition</em> section and click <strong>Download</strong> again:</p>
+
+<p><img src="assets/images/intellij-ce.png" alt="Download IntelliJ IDEA Community Edition" /></p>
+
+<p>Launch the installer, and then click <em>Next</em>. The default options are safe to use, so click <em>Next</em> a few times, and then <em>Install</em>.</p>
+
+<p><img src="assets/images/install-intellij-ce.png" alt="Install IntelliJ IDEA" /></p>
+
+<p>Once the installer completes, click the <em>Run IntelliJ IDEA Community Edition</em> checkbox and then click <strong>Finish</strong>. IntelliJ will load into the <em>Welcome</em> page and is ready to use.</p>
+
+<p><img src="assets/images/intellij-idea.png" alt="IntelliJ IDEA" /></p>
+
+<h2 id="eclipse-ide">Eclipse IDE</h2>
+
+<p>Eclipse is a free and open source IDE managed by the Eclipse Foundation. No license is needed to download and install Eclipse. You can download Eclipse by visiting <a href="https://eclipseide.org/">https://eclipseide.org/</a> and clicking the <em>Download</em> button:</p>
+
+<p><img src="assets/images/download-eclipse.png" alt="Download Eclipse" /></p>
+
+<p>Launch the installer, and then select <em>Eclipse IDE for Java Developers</em>. The default options are safe to use, so click <strong>INSTALL</strong>.</p>
+
+<p><img src="assets/images/install-eclipse.png" alt="Install Eclipse" /></p>
+
+<p>Once the installer completes, click <strong>LAUNCH</strong>, and then <strong>Launch</strong> on the initial Eclipse window. Eclipse will load into the <em>Welcome</em> page and is ready to use.</p>
+
+<p><img src="assets/images/eclipse-ide.png" alt="Eclipse IDE" /></p>
      
             </main>
          

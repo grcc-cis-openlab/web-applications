@@ -3,7 +3,7 @@ require 'json'
 require 'nokogiri'
 require 'loofah'
 
-Jekyll::Hooks.register :site, :post_write do |site|
+Jekyll::Hooks.register :site, :post_render do |site|
     root = Pathname.new(__FILE__).join('..')
     data_dir = root + '../assets/data'
 
