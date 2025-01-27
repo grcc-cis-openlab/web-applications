@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="GRCC,TLC,ruby,python,CIS" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    
+    <title> &mdash; GRCC Technology Learning Center</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Bree+Serif&display=swap" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/prism.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css" />
+    
+</head>
+<body>
+    <nav class="navbar navbar-dark fixed-top bg-brand-dark flex-md-nowrap p-0 navbar-expand-sm">
+    <a class="navbar-brand ps-3" href="./">GRCC Technology Learning Center</a>
+    <div class="collapse navbar-collapse" id="main-navbar">
+        <ul class="navbar-nav me-auto">
+            <li class="nav-item active text-nowrap">
+                <a class="nav-link" href="./">Docs</a>
+            </li>
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="./examples">Examples</a>
+            </li>
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="https://github.com/grcc-cis-openlab/web-applications">
+                    <i class="fab fa-github"></i>
+                    Github
+                </a>
+            </li>
+        </ul>
+        <form id="search-form" class="d-flex me-2" role="search">
+            <input id="search" name="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-light" type="submit">
+                <i class="fas fa-search"></i>
+                <span class="sr-only">Search</span>
+            </button>
+          </form>
+    </div>
+</nav>
+    
+    <div class="container-fluid">   
+        <nav class="d-none d-md-block bg-light sidebar">
+    <div class="sidebar-sticky">
+        <h6 class="sidebar-heading">
+            <a href="./" class="nav-link">
+                <i class="fa fa-home"></i>
+                Home
+            </a>
+        </h6>
+
+        <h6 class="sidebar-heading">
+            CIS-148 Html Essentials
+        </h6>
+        <ul class="sidebar-nav-list">
+            <li class="nav-item"><a class="nav-link" href="html-essentials-dev-tools">Setting Up a Local Development Environment</a></li>
+            <li class="nav-item"><a class="nav-link" href="connecting-to-raider">Connecting to the Raider Web Server</a></li>
+        </ul>
+
+        <div class="sidebar-heading">
+            <h6>CIS-241 Web Application Programming I</h6>
+            <h6>CIS-247 Web Application Programming II</h6>
+        </div>
+        <ul class="sidebar-nav-list">
+            <li class="nav-item"><a class="nav-link" href="setting-up-ec2-tutorial">Setting Up an AWS EC2 LAMP Server</a></li>
+            <li class="nav-item"><a class="nav-link" href="running-automated-ec2-script">Automated AWS EC2 Installation</a></li>
+        </ul>
+    </div>
+</nav>
+
+        <div class="main-content">
+            <main id="main" role="main">   
+                <h2 id="examples">Examples</h2>
+
+<article id="basic-html-template" class="example-section">
+  <h3 id="ex-basic-html-template">EX.<span class="example-counter"></span> Basic HTML template</h3>
+
+  <p>The following is a very basic template for an HTML5+ document.</p>
+
+  <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;Your Title Here&lt;/title&gt;
+
+    &lt;link rel="stylesheet" type="text/css" href="your-styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script src="your-script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</article>
+
+<article id="basic-js-alert" class="example-section">
+  <h3 id="ex-basic-javascript-alert-dialog">EX.<span class="example-counter"></span> Basic JavaScript Alert Dialog</h3>
+
+  <p>The following is a very basic example of using the JavaScript <code>alert()</code> function.</p>
+
+  <p>An alert is a simple dialog used to convey something to a user, and blocks any further interaction with the web page until it has been dismissed. An alert has no return value.</p>
+
+  <pre><code class="language-js">alert('Hello, world!');
+</code></pre>
+
+  <p>In the context of an otherwise empty HTML page:</p>
+
+  <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+    &lt;title&gt;Your Title Here&lt;/title&gt;
+
+    &lt;link rel="stylesheet" type="text/css" href="your-styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        alert('Hello, world!');
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</article>
+
+<article id="basic-js-confirm" class="example-section">
+  <h3 id="ex-basic-javascript-confirm-dialog">EX.<span class="example-counter"></span> Basic JavaScript Confirm Dialog</h3>
+
+  <p>The following is a very basic example of using the JavaScript <code>confirm()</code> function.</p>
+
+  <p>A confirm is a simple dialog used to convey something to a user (usually a question of some sort), and blocks any further interaction with the web page until it has been dismissed. The result of a confirm dialog will be <code>true</code> or <code>false</code>.</p>
+
+  <pre><code class="language-js">let confirmed = confirm('Do the thing?');
+</code></pre>
+
+  <p>In the context of an otherwise empty HTML page:</p>
+
+  <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+    &lt;title&gt;Your Title Here&lt;/title&gt;
+
+    &lt;link rel="stylesheet" type="text/css" href="your-styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        let confirmed = confirm('Do the thing?');
+        alert('Confirmed? ' + confirmed);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+  <p>This example will display the user's choice in an <code>alert()</code> - notice that the alert does not get called until the confirm is dismissed.</p>
+</article>
+
+<article id="basic-js-prompt" class="example-section">
+  <h3 id="ex-basic-javascript-prompt-dialog">EX.<span class="example-counter"></span> Basic JavaScript Prompt Dialog</h3>
+
+  <p>The following is a very basic example of using the JavaScript <code>prompt()</code> function.</p>
+
+  <p>A prompt is a simple dialog used to convey something to a user (usually a question of some sort) along with a textbox into which a user can enter their response, and blocks any further interaction with the web page until it has been dismissed. The result of a prompt dialog will be a string representing whatever the user typed into the prompt's textbox.</p>
+
+  <pre><code class="language-js">let response = prompt('Hello! How are you today?');
+</code></pre>
+
+  <p>An initial value can be provided as a secondary, optional argument:</p>
+
+  <pre><code class="language-js">let response = prompt('Hello! How are you today?', 'I am fine. Everything is fine...');
+</code></pre>
+
+  <p>In the context of an otherwise empty HTML page:</p>
+
+  <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+    &lt;title&gt;Your Title Here&lt;/title&gt;
+
+    &lt;link rel="stylesheet" type="text/css" href="your-styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script&gt;
+        let response = prompt('Hello! How are you today?');
+        alert('You answered: ' + response);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+  <p>This example will display the user's response in an <code>alert()</code> - notice that the alert does not get called until the prompt is dismissed.</p>
+</article>
+
+<article id="basic-css-examples" class="example-section">
+  <h3 id="ex-basic-css-examples">EX.<span class="example-counter"></span> Basic CSS Examples</h3>
+
+  <p>The following demonstrates a few of the core CSS selector methods to apply basic styles.</p>
+
+  <h4 id="ex-selecting-by-element-name">EX.<span class="example-counter"></span> Selecting by element name</h4>
+
+  <p>The following styles target all <code>&lt;h1&gt;</code> (heading 1) and <code>&lt;p&gt;</code> (paragraph) elements on the page,</p>
+
+  <ul>
+    <li>changing the color of the headings to red and setting the font size to 28 pixels</li>
+    <li>changing the color of the paragraphs to blue and setting the font size to 16 pixels</li>
+  </ul>
+
+  <p>Name selectors are created using the name of any HTML element/tag which exists in the HTML being styled.</p>
+
+  <pre><code class="language-css">h1 {
+    color: red;
+    font-size: 28px;
+}
+
+p {
+    color: blue;
+    font-size: 16px;
+}
+</code></pre>
+
+  <p>An example of an HTML page for which the above style is valid:</p>
+
+  <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+    &lt;title&gt;Your Title Here&lt;/title&gt;
+
+    &lt;link rel="stylesheet" type="text/css" href="your-styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;I'm the main heading!&lt;/h1&gt;
+    &lt;p&gt;I'm just some simple filler content.&lt;/p&gt;
+    &lt;p&gt;I'm just some simple filler content.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+  <p><strong>Element name selectors can match more than one element</strong>.</p>
+
+  <h4 id="ex-selecting-by-class-name">EX.<span class="example-counter"></span> Selecting by class name</h4>
+
+  <p>The following styles target all elements with a <code>class="important"</code> attribute on the page,</p>
+
+  <ul>
+    <li>changing the background color to red</li>
+    <li>changing the foreground (text) color to white</li>
+    <li>setting a 16 pixel padding to all sides of the matching elements</li>
+    <li>setting a 16 pixel margin to all sides of the matching elements</li>
+  </ul>
+
+  <p>Class selectors are created using the dot/period (<code>.</code>) character and a valid identifier which exists in the HTML being styled.</p>
+
+  <pre><code class="language-css">.important {
+    background-color: red;
+    color: white;
+    padding: 16px;
+    margin: 16px;
+}
+</code></pre>
+
+  <p>An example of an HTML page for which the above style is valid:</p>
+
+  <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+    &lt;title&gt;Your Title Here&lt;/title&gt;
+
+    &lt;link rel="stylesheet" type="text/css" href="your-styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;I'm the main heading!&lt;/h1&gt;
+    &lt;p&gt;I'm just some simple filler content.&lt;/p&gt;
+    &lt;div class="important"&gt;Hey! Look at me! I'm important!&lt;/div&gt;
+    &lt;p&gt;I'm just some simple filler content.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+  <p><strong>Class selectors can match more than one element</strong>.</p>
+
+  <h4 id="ex-selecting-by-id">EX.<span class="example-counter"></span> Selecting by ID</h4>
+
+  <p>The following styles target all elements with an <code>id="note"</code> attribute on the page,</p>
+
+  <ul>
+    <li>changing the background color to light blue</li>
+    <li>changing the foreground (text) color to dark blue</li>
+    <li>setting a 16 pixel padding to all sides of the matching elements</li>
+    <li>setting a 16 pixel margin to all sides of the matching elements</li>
+  </ul>
+
+  <p>ID selectors are created using the hash (<code>#</code>) character and a valid identifier which exists in the HTML being styled.</p>
+
+  <pre><code class="language-css">#note {
+    background-color: lightblue;
+    color: darkblue;
+    padding: 16px;
+    margin: 16px;
+}
+</code></pre>
+
+  <p>An example of an HTML page for which the above style is valid:</p>
+
+  <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+    &lt;title&gt;Your Title Here&lt;/title&gt;
+
+    &lt;link rel="stylesheet" type="text/css" href="your-styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;I'm the main heading!&lt;/h1&gt;
+    &lt;p&gt;I'm just some simple filler content.&lt;/p&gt;
+    &lt;div id="note"&gt;I'm a note! My ID must exist once and only once on the page to be valid.&lt;/div&gt;
+    &lt;p&gt;I'm just some simple filler content.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+  <p><strong>ID selectors can match one and only one element</strong>.</p>
+</article>
+     
+            </main>
+         
+            <footer id="footer" class="border-top py-3">
+                <div class="text-center">
+                    <p class="mb-1">
+                        GRCC Technology Learning Center &copy; 2023 - 2025
+                    </p>
+                    <p class="mb-0">
+                        Syntax highlighting by <a href="https://prismjs.com/">Prism.js</a> using <a href="https://andrewlock.net">Andrew Lock</a>'s Visual Studio theme.
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <div class="bb-scroll-widget">
+        <a href="#" class="back-to-top">
+            <span class="fa-stack">
+                <i class="fas fa-square fa-stack-2x"></i>
+                <i class="fas fa-arrow-up fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha256-E4RlfxwyJVmkkk0szw7LYJxuPlp6evtPSBDlWHsYYL8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+    
+    <script src="assets/js/bootbox.all.min.js"></script>
+    <script src="assets/js/prism.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <script src="assets/js/jquery.mark.js"></script>
+    <script src="assets/js/lunr.js"></script>
+    <script src="assets/js/search.js"></script>
+
+    
+    <script src="assets/js/example.js"></script>
+    <script src="assets/js/demos.js"></script>
+      
+
+    <div class="bb-scroll-widget">
+        <a href="#" class="back-to-top">
+            <span class="fa-stack">
+                <i class="fas fa-square fa-stack-2x"></i>
+                <i class="fas fa-arrow-up fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </div>
+</body>
+
+</html>

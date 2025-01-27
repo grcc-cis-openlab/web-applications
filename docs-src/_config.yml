@@ -1,0 +1,15 @@
+baseurl: ""
+url: "https://grcc-cis-openlab.github.io/web-applications/"
+
+version: 1.0.0
+
+kramdown:
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+  syntax_highlighter_opts:
+    disable: true
+
+plugins:
+  - jekyll-last-modified-at
+
+source:      ./
+destination: ../docs/
