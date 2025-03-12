@@ -34,13 +34,13 @@ body { font-size: 1rem; counter-reset: example; }
 
 .main-content #main h1 { color: #032c4d; margin-bottom: 1.25rem; }
 
-.main-content #main h2 { font-size: 1.75rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+.main-content #main h2 { font-size: 1.75rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; }
 
 .main-content #main h3 { font-size: 1.5rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
 
 .main-content #main h4 { font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
 
-.main-content #main img { display: block; margin: 0.25rem auto; max-width: 800px; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.125); }
+.main-content #main img { display: block; margin: 1.5rem auto; max-width: 800px; box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.125); }
 
 .main-content #main i, .main-content #main em { color: #032c4d; font-weight: 600; }
 

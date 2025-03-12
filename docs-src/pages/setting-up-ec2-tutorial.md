@@ -143,6 +143,12 @@ In your domain manager, create an A record using your public (Elastic IP) addres
     
 Your settings will vary based on the domain registrar where you acquired the domain.
 
+## **Keep an Eye on Billing\! (IMPORTANT)**
+
+Your EC2 instance will normally not accrue any charges, since the AMI chosen belongs to the *Free Tier Eligible* list. 
+
+The Elastic IP address **will** accrue charges, so pay attention to the balance left in your AWS Academy account. Once your balance reaches zero, you will not be able to continue the AWS Academy coursework.
+
 ## Connecting to Your New Server
 
 You can connect to your server in many ways, but let's look at two of them: WinSCP and the terminal. As the name suggests, WinSCP is only for the Windows operating system, but there are comparable programs available for macOS. How you connect is up to you, based on your personal preferences.
@@ -608,12 +614,6 @@ Assuming everything was entered properly, Cyberduck will connect to your EC2 ins
 Now that your instance is up and running and properly configured, it's a good idea to save a backup of the current state of the server. For more information, visit 
 
 [https://docs.aws.amazon.com/ebs/latest/userguide/ebs-snapshots.html](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-snapshots.html)
-
-## **Keep an Eye on Billing\! (IMPORTANT)**
-
-Your EC2 instance will normally not accrue any charges, since the AMI chosen belongs to the *Free Tier Eligible* list. 
-
-The Elastic IP address **will** accrue charges, so pay attention to the balance left in your AWS Academy account. Once your balance reaches zero, you will not be able to continue the AWS Academy coursework.
 
 ---
 
