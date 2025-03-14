@@ -17,7 +17,7 @@ body { font-size: 1rem; counter-reset: example; }
 
 .sidebar .sidebar-nav-list { margin: 0 1rem 1rem; padding: 0 0 0 1rem; }
 
-.sidebar .sidebar-nav-list .nav-link { font-weight: 500; color: #007bff; }
+.sidebar .sidebar-nav-list .nav-link { font-weight: 500; color: #007bff; padding: 0.25rem 0; margin: 0.25rem 0; }
 
 .sidebar .sidebar-nav-list .nav-link .feather { margin-right: 4px; color: #999; }
 

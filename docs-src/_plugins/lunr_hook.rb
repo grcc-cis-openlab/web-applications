@@ -5,7 +5,7 @@ require 'loofah'
 
 Jekyll::Hooks.register :site, :post_write do |site|
     root = Pathname.new(__FILE__).join('..')
-    data_dir = root + '../assets/data'
+    data_dir = root + '../../docs/assets/data'
 
     if !Dir.exist?(data_dir) then
         Dir.mkdir(data_dir)
