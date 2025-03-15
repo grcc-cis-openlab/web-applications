@@ -73,11 +73,11 @@ You'll wind up with a directory structure on Raider that looks something like:
 To view this file, you'll enter the following in your web browser's navigation bar:
 
 ```http
-htttps://raider.grcc.edu/~yourusername/Unit1/index.html
+https://raider.grcc.edu/~yourusername/Unit1/index.html
 ```
 
 The same process is used for every assignment which you upload:
 
 ```http
-htttps://raider.grcc.edu/~yourusername/NameOfUnitFolder/NameOfAssignmentFile.html
+https://raider.grcc.edu/~yourusername/NameOfUnitFolder/NameOfAssignmentFile.html
 ```

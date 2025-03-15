@@ -204,9 +204,9 @@
 
 <h3 id="allocate-an-elastic-ip-address-and-associate-it-with-your-ec2-instance">Allocate an Elastic IP address and associate it with your EC2 instance</h3>
 
-<p>Our next step is to assign a permanent IP address to your EC2 instance - this is required to install a SSL/TLS certificate, which we'll need in order to 
+<p>Our next step is to assign a static IP address to your EC2 instance - this is required to install a SSL/TLS certificate, which we'll need in order to 
 enable HTTPS (an encrypted version of a standard web request). While not strictly required, HTTPS is considered best practice, especially when installing tools 
-such as phpMyAdmin for managing our databases (you'll do this step later in the tutorial).</p>
+such as phpMyAdmin for managing your databases (you'll do this step later in the tutorial).</p>
 
 <h4 id="allocate-an-elastic-ip-address">Allocate an Elastic IP address</h4>
 
@@ -318,7 +318,7 @@ such as phpMyAdmin for managing our databases (you'll do this step later in the 
 
 <p><a href="https://learn.microsoft.com/en-us/windows/terminal/install">https://learn.microsoft.com/en-us/windows/terminal/install</a></p>
 
-<p>Once your terminal is running, you'll need to verify if the ssh command is available. In the terminal, type:</p>
+<p>Once your terminal is running, you'll need to verify if the <code>ssh</code> command is available. In the terminal, type:</p>
 
 <pre><code class="language-shell">ssh
 </code></pre>
@@ -463,7 +463,7 @@ such as phpMyAdmin for managing our databases (you'll do this step later in the 
 <pre><code class="language-shell">sudo mkdir -p /var/www/your_domain/log
 </code></pre>
 
-<p>This will create the directories to which you'll upload your homework files, later. To verify that our virtual host is working, we'll create a simple test page, using <strong>nano<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup></strong>:</p>
+<p>This will create the directories to which you'll upload your homework files, later. To verify that your virtual host is working, we'll create a simple test page, using <strong>nano<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup></strong>:</p>
 
 <pre><code class="language-shell">sudo nano /var/www/your_domain/html/index.html
 </code></pre>
@@ -482,19 +482,19 @@ such as phpMyAdmin for managing our databases (you'll do this step later in the 
 
 <p>Again, replace <em>your_domain</em> with your domain name. Save and exit<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>.</p>
 
-<p>Next, we'll create directories for storing our virtual host configuration files. Enter the following command:</p>
+<p>Next, we'll create directories for storing your virtual host configuration files. Enter the following command:</p>
 
 <pre><code class="language-shell">sudo mkdir /etc/httpd/sites-available
 </code></pre>
 
-<p>This creates a directory for storing virtual hosts we <em>could</em> use. Next, enter the following command:</p>
+<p>This creates a directory for storing virtual hosts you <em>could</em> use. Next, enter the following command:</p>
 
 <pre><code class="language-shell">sudo mkdir /etc/httpd/sites-enabled
 </code></pre>
 
 <p>This directory stores the configuration file for <strong>enabled</strong> virtual hosts; that is, the <em>active</em> virtual hosts.</p>
 
-<p>Next, we need to update the Apache configuration file to tell it to look for our virtual host configurations. We'll use nano to update the file:</p>
+<p>Next, we need to update the Apache configuration file to tell it to look for your virtual host configurations. We'll use nano to update the file:</p>
 
 <pre><code class="language-shell">sudo nano /etc/httpd/conf/httpd.conf
 </code></pre>
@@ -504,7 +504,7 @@ such as phpMyAdmin for managing our databases (you'll do this step later in the 
 <pre><code class="language-apacheconf">IncludeOptional sites-enabled/*.conf
 </code></pre>
 
-<p><strong>Save and exit.</strong> From now on, any configuration files found in the <em>sites-enabled</em> directory will be loaded when Apache starts. Let's add a configuration file for our domain (remember to replace <em>your_domain</em> with your domain name):</p>
+<p><strong>Save and exit.</strong> From now on, any configuration files found in the <em>sites-enabled</em> directory will be loaded when Apache starts. Let's add a configuration file for your domain (remember to replace <em>your_domain</em> with your domain name):</p>
 
 <pre><code class="language-shell">sudo nano /etc/httpd/sites-available/your_domain.conf
 </code></pre>
@@ -553,7 +553,7 @@ such as phpMyAdmin for managing our databases (you'll do this step later in the 
 
 <h2 id="secure-the-database-server-and-install-phpmyadmin">Secure the Database Server and Install phpMyAdmin</h2>
 
-<p>With the hard part out of the way, we can complete a few housekeeping tasks. We need to change some of the default MariaDB settings (to prevent unauthorized users from accessing our databases) and we'll install phpMyAdmin to give us a graphical user interface (GUI) for managing MariaDB.</p>
+<p>With the hard part out of the way, we can complete a few housekeeping tasks. We need to change some of the default MariaDB settings (to prevent unauthorized users from accessing your databases) and we'll install phpMyAdmin to give you a graphical user interface (GUI) for managing MariaDB.</p>
 
 <h3 id="secure-the-database">Secure the Database</h3>
 
@@ -589,7 +589,7 @@ such as phpMyAdmin for managing our databases (you'll do this step later in the 
 
 <h3 id="install-phpmyadmin">Install phpMyAdmin</h3>
 
-<p>With MariaDB installed and configured, our last task is to install phpMyAdmin. Run the following commands, replacing <em>your_domain</em> with your domain name:</p>
+<p>With MariaDB installed and configured, your last task is to install phpMyAdmin. Run the following commands, replacing <em>your_domain</em> with your domain name:</p>
 
 <pre><code class="language-shell">sudo yum install php-mbstring php-xml -y
 </code></pre>

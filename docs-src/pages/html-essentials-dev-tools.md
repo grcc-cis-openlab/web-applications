@@ -43,4 +43,4 @@ SublimeText ([https://www.sublimetext.com/](https://www.sublimetext.com/)) is a 
 
 ### Notepad++
 
-Notepad++ ([https://notepad-plus-plus.org/](https://notepad-plus-plus.org/)) is another code editor very similar in function to Visual Studio Code. <b>This editor is only available for the Windows operating system</b>, unless you wish to work through the process of installing Parallels ([https://www.parallels.com/products/desktop/](https://www.parallels.com/products/desktop/)) on macOS or learning how to install and configure Wine ([https://www.winehq.org/](https://www.winehq.org/)) for Linux/UNIX/BSD or macOS.
+Notepad++ ([https://notepad-plus-plus.org/](https://notepad-plus-plus.org/)) is another code editor very similar in function to Visual Studio Code. <b>This editor is only available for the Windows operating system</b>.

@@ -112,9 +112,9 @@ Clicking that link will take you to the overview of your new instance:
 
 ### Allocate an Elastic IP address and associate it with your EC2 instance
 
-Our next step is to assign a permanent IP address to your EC2 instance - this is required to install a SSL/TLS certificate, which we'll need in order to 
+Our next step is to assign a static IP address to your EC2 instance - this is required to install a SSL/TLS certificate, which we'll need in order to 
 enable HTTPS (an encrypted version of a standard web request). While not strictly required, HTTPS is considered best practice, especially when installing tools 
-such as phpMyAdmin for managing our databases (you'll do this step later in the tutorial).
+such as phpMyAdmin for managing your databases (you'll do this step later in the tutorial).
 
 #### Allocate an Elastic IP address
 
@@ -215,7 +215,7 @@ The command line utility and PowerShell are already installed on your computer. 
 
 [https://learn.microsoft.com/en-us/windows/terminal/install](https://learn.microsoft.com/en-us/windows/terminal/install)
 
-Once your terminal is running, you'll need to verify if the ssh command is available. In the terminal, type:
+Once your terminal is running, you'll need to verify if the `ssh` command is available. In the terminal, type:
 
 ```shell
 ssh
@@ -381,7 +381,7 @@ sudo mkdir -p /var/www/your_domain/html
 sudo mkdir -p /var/www/your_domain/log
 ```
 
-This will create the directories to which you'll upload your homework files, later. To verify that our virtual host is working, we'll create a simple test page, using **nano[^2]**:
+This will create the directories to which you'll upload your homework files, later. To verify that your virtual host is working, we'll create a simple test page, using **nano[^2]**:
 
 ```shell
 sudo nano /var/www/your_domain/html/index.html
@@ -402,13 +402,13 @@ Copy and paste the following markup:
 
 Again, replace _your\_domain_ with your domain name. Save and exit[^3].
 
-Next, we'll create directories for storing our virtual host configuration files. Enter the following command:
+Next, we'll create directories for storing your virtual host configuration files. Enter the following command:
 
 ```shell
 sudo mkdir /etc/httpd/sites-available
 ```
 
-This creates a directory for storing virtual hosts we *could* use. Next, enter the following command:
+This creates a directory for storing virtual hosts you *could* use. Next, enter the following command:
 
 ```shell
 sudo mkdir /etc/httpd/sites-enabled
@@ -416,7 +416,7 @@ sudo mkdir /etc/httpd/sites-enabled
 
 This directory stores the configuration file for **enabled** virtual hosts; that is, the *active* virtual hosts. 
 
-Next, we need to update the Apache configuration file to tell it to look for our virtual host configurations. We'll use nano to update the file:
+Next, we need to update the Apache configuration file to tell it to look for your virtual host configurations. We'll use nano to update the file:
 
 ```shell
 sudo nano /etc/httpd/conf/httpd.conf
@@ -428,7 +428,7 @@ Scroll to the end of the file (using your <kbd>&uarr;</kbd> UP and <kbd>&darr;</
 IncludeOptional sites-enabled/*.conf
 ```
 
-**Save and exit.** From now on, any configuration files found in the *sites-enabled* directory will be loaded when Apache starts. Let's add a configuration file for our domain (remember to replace *your\_domain* with your domain name):
+**Save and exit.** From now on, any configuration files found in the *sites-enabled* directory will be loaded when Apache starts. Let's add a configuration file for your domain (remember to replace *your\_domain* with your domain name):
 
 ```shell
 sudo nano /etc/httpd/sites-available/your_domain.conf
@@ -482,7 +482,7 @@ Wait a moment or two, and assuming you followed the instructions above correctly
 
 ## Secure the Database Server and Install phpMyAdmin
 
-With the hard part out of the way, we can complete a few housekeeping tasks. We need to change some of the default MariaDB settings (to prevent unauthorized users from accessing our databases) and we'll install phpMyAdmin to give us a graphical user interface (GUI) for managing MariaDB.
+With the hard part out of the way, we can complete a few housekeeping tasks. We need to change some of the default MariaDB settings (to prevent unauthorized users from accessing your databases) and we'll install phpMyAdmin to give you a graphical user interface (GUI) for managing MariaDB.
 
 ### Secure the Database
 
@@ -520,7 +520,7 @@ sudo systemctl enable mariadb
 
 ### Install phpMyAdmin
 
-With MariaDB installed and configured, our last task is to install phpMyAdmin. Run the following commands, replacing *your\_domain* with your domain name:
+With MariaDB installed and configured, your last task is to install phpMyAdmin. Run the following commands, replacing *your\_domain* with your domain name:
 
 ```shell
 sudo yum install php-mbstring php-xml -y
